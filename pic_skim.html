@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>武汉福齐赛鸽俱乐部</title>
+<link href="./images/tittle.jpg" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<link rel="stylesheet" href="./css/initialize.css" />
+<link rel="stylesheet" href="./css/style_newest.css" />
+<link rel="stylesheet" href="./css/style_newest_pic.css" />
+<link rel="stylesheet" href="./css/style_newest_art.css" />
+<link rel="stylesheet" href="./css/style_pic_skim.css" />
+<link rel="stylesheet" href="./css/youxuan.css" />
+<link rel="stylesheet" href="./css/nav.css" />
+<link rel="stylesheet" href="./css/footer.css" />
+<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+<script src="./js/jquery.nav.js"></script>
+<script src="./js/right_nav.js"></script>
+<script src="./js/yxclose.js"></script>
+<script src="./js/pic_skim.js"></script>
+</head>
+<body>
+<div id="container">
+	<!-- 右侧悬浮框 -->
+	<div class="youxuan">
+		<!-- 扫码关注 -->
+		<div class="youxuan_gl" id="you_ma">
+			<h1 class="iphone"></h1>
+			<p>扫码关注</p>
+			<div class="app_weixin">
+				<img src="./images/app_weixin.png" alt="" />
+			</div>
+		</div>
+		<!-- 空距自测 -->
+		<div class="youxuan_gl" id="you_ju">
+			<p>空距自测</p>
+			<div class="youxuan_kjzc">
+				<form method="POST" name="jskj1" action="index.php">
+					<tbody>
+						<tr>
+							<td width="10"> </td>
+							<td width="100%" height="30" valign="top" bgcolor="#FFFFFF" class="tbl_zi"><br>
+								两点空距计算结果<input type="text" name="DISTANCE-wh" size="10" value="">公里 <br><br>
+								起点经度 <input type="text" name="startLongi_d" size="1" maxlength="3" value="">度 
+								<input type="text" name="startLongi_m" size="1" maxlength="3" value="">分 
+								<input type="text" name="startLongi_s" size="3" maxlength="6" value="">秒 <br>
+								起点纬度 <input type="text" name="startLagi_d" size="1" maxlength="3" value="">度 
+								<input type="text" name="startLagi_m" size="1" maxlength="3" value="">分
+								<input type="text" name="startLagi_m" size="3" maxlength="6" value="">秒<br> 
+								终点经度 <input type="text" name="endLongi_d" size="1" maxlength="3" value="">度
+								<input type="text" name="endLongi_m" size="1" maxlength="3" value="">分 
+								<input type="text" name="endLongi_s" size="3" maxlength="6" value="">秒<br> 
+								终点纬度 <input type="text" name="endLagi_d" size="1" maxlength="3" value="">度 
+								<input type="text" name="endLagi_m" size="1" maxlength="3" value="">分 
+								<input type="text" name="endLagi_s" size="3" maxlength="6" value="">秒<br><br>
+								<input type="submit" value="提交" name="B1">
+								<input type="reset" value="清空" name="B2">	
+								<input type="button" onclick="setfuqijwd();" value="福齐俱乐部">
+							</td> 
+						</tr>  
+					</tbody>
+				</form>
+			</div>
+		</div>
+		<!-- 天气预告 -->
+		<div class="youxuan_gl" id="you_whe">
+			<a href="http://www.weather.com.cn/weather/101200101.shtml" target="_blank"><p>天气预报</p></a>
+		</div>
+		<div class="youxuan_bottom">
+		<!-- 返回顶部 -->
+			<div class="youxuan_gl_b" id="y_top">
+				<div>
+					<img src="./images/to_top.png" alt="" />
+				</div>
+				<p>顶部</p>
+			</div>
+			<!-- 关闭右悬框 -->
+			<div class="youxuan_gl_b" id="youxuan_gl_b_close">
+				<img src="./images/close.png" alt="" />
+			</div>
+		</div>
+	</div>
+	<!-- 便民服务 -->
+	<div class="con_min">
+		<p>便民服务</p>
+	</div>
+	<!-- 首页头部 -->
+	<div class="header">
+		<div class="fq_4 header_fq4">
+			<img src="./images/logo.png" alt="LOGO" />
+			<!-- <div class="h_se">
+				<ul>
+					<li class="search">
+						<select name="tp" class="sel" style="width:80px;height:30px;">
+			                            <option value="0">不限</option>
+			                            <option value="1">最新快讯</option>
+			                            <option value="2">赛绩公告</option>
+			                            <option value="2">赛绩规程</option>
+			                            <option value="3">训放计划</option>
+				                    </select>
+						<input type="text" id="keyword" name="keyword" onkeydown="return keydown()" />
+						<span>
+							<p class="tn_s_button" onclick="_gaq.push(['_trackEvent', 'home_wh','search','搜索']);tuniuRecorder.push('3_3_1_1_1_2');">
+								<button type="button" style="border:0" id="searchSub" onclick="search_sub();"></button>
+							</p>
+						</span>
+					</li>
+				</ul>
+			</div> -->
+		</div>	
+	</div>
+	<!-- 导航 -->
+	<div class="nav">
+		<div class="fq_1 nav_fq1">
+			<ul>
+				<li class="a1"><a href="index.html" >首页</a></li>
+				<li class="a2"><a class="menuitem" href="newest.html">最新公告</a></li>
+				<li class="a3"><a href="boardcast.html" target="_blank">赛事直播</a>
+				</li>
+				<li class="a4"><a href="http://fqzdg.golor.com/login.php" target="_blank">在线指定</a></li>
+				<li class="a5"><a href="#">赛绩公告</a>
+					<ul class="xiala">
+						<li><a href="#">原榜</a></li>
+						<li><a href="#">二榜</a></li>
+						<li><a href="#">正榜</a></li>
+					</ul>
+				</li>
+				<li class="a6"><a href="#">赛事规程</a></li>
+				<li class="a7"><a href="#">其他服务</a>
+					<ul class="xiala">
+						<li><a href="http://www.001100.cc/broadcast4.php?g=8602" target="_blank">隆飞尔在线查询</a></li>
+						<li><a href="#">训放计划</a></li>
+					</ul>
+	
+				</li>
+				<li class="a8"><a class="a8" href="#">关于我们</a>
+					<ul class="xiala">
+						<li><a href="#">俱乐部简介</a></li>
+						<li><a href="#">联系我们</a></li>
+					</ul>
+	
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 图片浏览主体 -->
+	<div class="main">
+		<div class="fq_1" id="main_bo">
+			<table>
+				<tr>
+					<td valign="top">
+						<!-- //左边 -->
+						<div class="main_left">
+							<div id="main_news">新闻中心&nbsp;<span>NEWS</span></div>
+							<ul class="sub_menu">
+								<li><a href="newest.html">最新公告</a></li>
+								<li class="sub_menu_d"><a>赛绩公告</a></li>
+								<div class="pannel_d">
+									<p><a href="#">原榜</a></p>
+									<p><a href="#">二榜</a></p>
+									<p><a href="#">正榜</a></p>
+								</div>
+								<li><a href="#">赛事规程</a></li>
+								<li><a href="#">训放计划</a></li>
+								<li class="sub_menu_a"><a>照片</a></li>
+								<div class="pan">
+									<p><a href="#">赛事照片</a></p>
+									<p><a href="newest_pic.html" class="bap">鸽王照片</a></p>
+									<p><a href="#">俱乐部照片</a></p>
+								</div>
+								<li class="sub_menu_b"><a>视频</a></li>
+								<div class="pannel_b">
+									<p><a href="newest_vid.html">赛事视频</a></p>
+									<p><a href="#">赛鸽轶事</a></p>
+									<p><a href="#">鸽钟操作说明</a></p>
+								</div>
+								<li class="sub_menu_c"><a>关于我们</a></li>
+								<div class="pannel_c">
+									<p><a href="#">俱乐部简介</a></p>
+									<p><a href="#">联系我们</a></p>
+								</div>
+							</ul>
+						</div>
+					</td>
+					<td valign="top">
+						<!-- //右边 -->
+						<div class="main_right1">
+							<div class="breadcrumb">
+								<ul>
+									<li>当前位置：<a href="fuqi.html">首页</a>&gt;</li>
+									<li><a href="#">照片</a>&gt;</li>
+									<li><a href="newest_pic.html">鸽王照片</a>&gt;</li>
+									<li><a href="#">2015年度优胜鸽</a></li>
+								</ul>
+							</div>
+							<div class="content_skim">
+								<!-- 标题区 -->
+								<table>
+									<tbody>
+										<tr>
+											<td align="center" width="747px" height="75px">
+												<b><span style="font-size:24px">2015年度优胜鸽</span></b>
+												<br >
+												<br >
+												2016-1-10 22:28:54 | 
+												<a href="fuqi.html">武汉福齐赛鸽俱乐部</a>
+												 | 访问数123
+											</td>
+										</tr>
+										<!-- <tr class="cont_skim_ta">
+											<td width="7747px" height="521px" class="content_art_skim" >
+												<img src="./images/1.jpg" alt="" width="730" height="506"/>
+												<img src="./images/1.jpg" alt="" width="730" height="506"/>
+												<img src="./images/1.jpg" alt="" width="730" height="506"/>
+												<img src="./images/1.jpg" alt="" width="730" height="506"/>
+												<img src="./images/1.jpg" alt="" width="730" height="506"/>
+												<img src="./images/1.jpg" alt="" width="730" height="506"/>
+												<img src="./images/1.jpg" alt="" width="730" height="506"/>
+												<div class="arrLeft" id="efpLeftArea" title="上一张"></div>
+												<div class="arrRight" id="efpRightArea" title="下一张"></div>
+											</td>
+										</tr>
+										<tr class="cont_skim_ta">
+											<td class="describe">
+												<div class="descibe_to"><em class="cc00" >1</em>/26</div>
+												<h2 class="describe_sl">
+													2015年优胜鸽第一名、第二名
+												</h2>
+											</td>
+										</tr>
+										<tr class="cont_skim_ta">
+											<td height="80px">
+												<a href="#" class="skim_up">
+													<span class="bg bg_a"></span>
+													<span class="bg bg_b"></span>
+													<span class="bg bg_c"></span>
+													<em><<上一图集</em>
+												</a>
+												<a href="#" class="skim_left">
+													<img src="./images/left.png" alt="" />
+												</a>
+												<div class="swp-list-cont" style="width:455px;">
+													<ul style="width: 2640px;">
+														<li>
+															<a class="pj"><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li>
+														<li>
+															<a><img src="./images/1.jpg" alt="俱乐部理事乘船去莫德林学院" width="80" height="60"></a>
+														</li> 
+													</ul>
+												</div>
+												<a href="#" class="skim_right">
+													<img src="./images/right.png" alt="" />
+												</a>
+												<a href="#" class="skim_down">
+													<span class="bg bg_a"></span>
+													<span class="bg bg_b"></span>
+													<span class="bg bg_c"></span>
+													<em>下一图集>></em>
+												</a>
+											</td>
+										</tr> -->
+									</tbody>
+								</table>
+								<!-- 图片区 -->
+								<div class="cont_skim_ta">
+									<div class="cont_st">
+										<ul>
+											<li><img src="./images/1.jpg" alt="鸽王" width="730" height="506"/></li>
+											<li><img src="./images/1.jpg" alt="鸽王" width="730" height="506"/></li>
+											<li><img src="./images/1.jpg" alt="鸽王" width="730" height="506"/></li>
+											<li><img src="./images/1.jpg" alt="鸽王" width="730" height="506"/></li>
+											<li><img src="./images/1.jpg" alt="鸽王" width="730" height="506"/></li>
+											<li><img src="./images/1.jpg" alt="鸽王" width="730" height="506"/></li>
+											<li><img src="./images/1.jpg" alt="鸽王" width="730" height="506"/></li>
+											<li><img src="./images/1.jpg" alt="鸽王" width="730" height="506"/></li>
+										</ul>
+										<div class="arrLeft" id="efpLeftArea" title="上一张"></div>
+										<div class="arrRight" id="efpRightArea" title="下一张"></div>
+									</div>
+									<!-- <div class="cont_page">
+										<a href="#" class="skim_up">
+											<span class="bg bg_a"></span>
+											<span class="bg bg_b"></span>
+											<span class="bg bg_c"></span>
+											<em><<上一图集</em>
+										</a>
+										<a href="#" class="skim_left">
+											<img src="./images/left.png" alt="" />
+										</a>
+										<div class="swp-list-cont" style="width:445px;">
+											<ul style="width: 2640px;">
+												<li>
+													<a class="pj"><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li>
+												<li>
+													<a><img src="./images/1.jpg" alt="" width="80" height="60"></a>
+												</li> 
+											</ul>
+										</div>
+										<a href="#" class="skim_right">
+											<img src="./images/right.png" alt="" />
+										</a>
+										<a href="#" class="skim_down">
+											<span class="bg bg_a"></span>
+											<span class="bg bg_b"></span>
+											<span class="bg bg_c"></span>
+											<em>下一图集>></em>
+										</a>
+									</div> -->
+								</div>
+
+							</div>
+						</div> 
+					</td>
+				</tr>
+			</table>
+			
+			
+		</div>
+	</div>
+	<!-- 底部 -->
+	<div class="footer">
+		<div class="fq_1" id="footer_1">
+			<div id="weixin" >
+				<h2>微信公众平台</h2>
+			</div>
+			<div class="about_us" >
+				<h2>关于本站</h2>
+				<ul>
+					<li><a href="#">网站首页</a></li>
+					<li><a href="#">赛事规程</a></li>
+					<li><a href="#">赛事直播</a></li>
+					<li><a href="#">训放计划</a></li>
+					<li><a href="#">联系我们</a></li>
+				</ul>
+			</div>
+			<div class="link_us">
+				<h2>友情链接</h2>
+				<ul>
+					<li><a href="http://www.chinaxinge.com/" target="_blank">中国信息信鸽网</a></li>
+					<li><a href="http://www.zhuoyuesaige.com/" target="_blank">卓越赛鸽网</a></li>
+					<li><a href="http://www.weather.com.cn/weather/101200101.shtml" target="_blank">中国天气网</a></li>
+					<li><a href="http://gdgp.chinaxinge.com/default2.asp?gp_id=31" target="_blank">北京爱亚卡普赛鸽公棚</a></li>
+					<li><a href="http://www.rpw.com.cn/" target="_blank">赛鸽天地网</a></li>
+				</ul>
+			</div>
+			<div class="attention_us">
+				<h2>关注我们</h2>
+				<ul>
+					<li class="zhonxin"><a href="http://jlb.chinaxinge.com/style/5/?jlb_id=928" target="_blank">福齐中信网</a></li>
+					<li class="gexie"><a href="http://gdxh.chinaxinge.com/style/mo3/?xh_id=224" target="_blank">武汉市信鸽协会</a></li>
+					<li class="weixin"><a href="#" target="_blank">福齐微信</a></li>
+					<li class="weixin"><a href="#" target="_blank">福齐睿翔村</a></li>
+				</ul>
+			</div>
+			<div id="copyright">
+				<h2>版权信息</h2>
+				<p>本站发布的文字、图片及素材均来自互联网，仅供参考和学习，版权归原作者所有，切勿作商业用途。如果侵害了您的正常权益，请发邮件至whfqclub@163.com与我们联系，我们将及时处理。</p>
+			</div>
+			<div class="phone">
+				<h2>联系电话：</h2>
+				<p>027-82856977、027-82856933</p>
+			</div>
+			
+		</div>
+		<div class="copyright">
+				<p class="copyright_p">Copyright 2010-2015 All Rights Reserved 鄂ICP备11014914号</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

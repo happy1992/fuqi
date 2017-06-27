@@ -1,0 +1,142 @@
+/* 右悬框 CSS */
+.youxuan{
+	width: 36px;
+	height: 100%;
+	background:#1c1c1c;
+	position: fixed;
+	z-index: 70;
+	right: 0px;
+	border: none;
+}
+.youxuan_gl{
+	color: #fff;
+	border-bottom:1px solid #414141;
+	width: 100%;
+	cursor: pointer;
+}
+.youxuan_gl p{
+	font-size: 12px;
+	width: 14px;
+	line-height: 15px;
+	text-align: center;
+	margin: 0px auto;
+	color: white;
+}
+.iphone{
+	width: 14px;
+	height: 21px;
+	background: url(../images/phone.png) no-repeat;
+	margin: 0 auto;
+}
+#you_ma{
+	height: 85px;
+	padding: 10px 0;
+}
+#you_ma:hover,#you_ju:hover{
+	background: url(../images/zhi_yin2.png) no-repeat left center;
+}
+#you_ma p{
+	margin-top: 5px;
+}
+#you_ju{
+	height:60px;
+	padding: 10px 0;
+}
+#you_whe{
+	height:60px;
+	padding: 10px 0;
+}
+#you_whe:hover{
+	background: #da251c;
+}
+#you_whe a{
+	color: white;
+	display: block;
+	width: 36px;
+	height: 60px;
+
+}
+.app_weixin img{
+	display: block;
+	margin: 0 auto;
+}
+.app_weixin{
+	width: 130px;
+	height: 175px;
+	position: relative;
+	right: 130px;
+	top: -95px;
+	background: url(../images/d1.png);
+	display: none;
+}
+.youxuan_kjzc{
+	width: 237px;
+	height: 200px;
+	padding: 10px;
+	position: relative;
+	right: 257px;
+	top: -70px;
+	background: url(../images/d1.png);
+	display: none;
+	}
+.app_weather{
+	width: 160px;
+	height: 280px;
+	position: relative;
+	right: 160px;
+	top: -70px;
+	background: url(../images/d1.png);
+	display: none;
+}
+.youxuan_bottom{
+	width: 100%;
+	position:absolute;
+	bottom: 30px;
+	right: 0px;
+}
+.youxuan_gl_b{
+	color: #fff;
+	width: 36px;
+	height: 40px;
+	margin: 0 auto;
+	cursor: pointer;
+	text-align: center;
+}
+.youxuan_gl_b img{
+	display: block;
+	margin: 0 auto;
+}
+.youxuan_gl_b p{
+	margin: 0 auto;
+	width: 24px;
+}
+.youxuan_gl_b a{
+	width: 36px;
+	height: 40px;
+}
+.youxuan_gl_b:hover{
+	background: red;
+}
+.youxuan_gl_b_top{
+	
+}
+.youxuan_gl_b_close{
+	
+}
+/* 便民服务 CSS */
+.con_min{
+	width: 80px;
+	height: 70px;
+	background: url(../images/d1.png);
+	position: fixed;
+	bottom: 30px;
+	right: -80px;
+	color: #ffeb01;
+	cursor: pointer;
+}
+.con_min p{
+	width: 40px;
+	height: 30px;
+	font: 16px "微软雅黑",Verdana, Geneva, sans-serif;
+	padding: 12px 25px;
+}

@@ -1,0 +1,94 @@
+.main_right2{
+	width: 800px;
+	background: #fdfcfc;
+	margin: 10px 10px 10px 0;
+	float: left;
+}
+.main_right2 li{
+	}
+.content_pic{
+	width: 780px;
+	margin-left: 27px;
+}
+.pic_list{
+	width: 252px;
+	height: 200px;
+	float: left;
+}
+.pic_list img{
+	display: block;
+	border:1px solid #e5e5e5;
+	padding: 5px;
+	background: #fff;
+}
+.pic_list a{
+	width: 250px;
+	height: 190px;
+	font: 12px/28px "Microsoft Yahei";
+	text-align: left;
+	display: block;
+}
+.content_pic,.pic_list,.main_right2,.pic_list a{
+	overflow: hidden;
+}
+.pic_list a:hover{
+	color:red;
+	text-decoration: underline;
+}
+.ysg{
+	display: block;
+}
+.pagesnums_pic {
+	height: 26px;
+	overflow: hidden;
+	text-align: center;
+	padding:10px 0 30px 0;
+	text-align: center;
+}
+.pagesnums_pic table {
+	border-collapse: collapse;
+	margin: 0 auto;
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+.pagesnums_pic ul li a {
+	border: 1px solid gray;
+	padding: 2px 6px;
+	text-align: middle;
+	line-height: 16px;
+	float: left;
+	height: 16px;
+	margin: 0 2px;
+}
+.pagesnums_pic ul li {
+	display: block;
+	float: left;
+	height: 22px;
+	line-height: 21px;
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.pagesnums_pic ul li a,.pagesnums_pic .none {
+	display: block;
+	float: left;
+	height: 22px;
+	line-height: 21px;
+	background-repeat: repeat-x;
+	background-position: left top;
+	border-color: #E1E3EF #BFC7D8 #BFC7D8 #E1E3EF;
+	border-style: solid;
+	border-width: 1px;
+}
+.pagesnums_pic ul li a:hover {
+	background-position: left -25px;
+	text-decoration: none;
+	color: #3263CA;
+	border-color: #A7EAFF #1FB3E1 #1FB3E1 #A7EAFF;
+}
+.pannel_c{
+	width: 196px;
+	padding-left: 27px;
+}
+.pannel_c a:hover{
+	background: url(../images/zhi_yin.png) no-repeat 0px center;
+}

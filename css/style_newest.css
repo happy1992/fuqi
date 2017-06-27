@@ -1,0 +1,222 @@
+.container{
+	width: 100%;
+	position: relative;
+	background-image: url(../images/fq003.png) ;
+}
+/* 最新公告主体 CSS */
+.main{
+	width: 100%;
+}
+#main_bo{
+	width: 1080px;
+	background-image: url(../images/fq003.png) ;
+	padding-top: 1px;
+}
+#main_bo>table{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	background: url(../images/d2.png);
+	border-collapse: collapse;
+}
+.main_left{
+	width: 250px;
+	background: #fdfcfc fixed;
+	margin: 10px;
+	float: left;
+	clear: left;
+	padding-bottom: 60px;
+}
+.main_left a:hover{
+	color: #fdfcfc;
+	background-color: red;
+	/* background: url(../images/zhi_yin.png) no-repeat left center; */
+}
+.main_left li{
+	width:196px;
+	height: 35px;
+	font:bold 14px  "微软雅黑",Verdana, Geneva, sans-serif  ;
+	margin: 0 auto;
+	border-bottom: 1px solid #d6d6d6;
+	/* background: url(../images/zhiyin.png) no-repeat left center; */
+	overflow: hidden;
+}
+.main_left li a{
+	width:176px;
+	height: 35px;
+	display: block;
+	color: black;
+	padding-left: 20px;
+	line-height: 35px;
+}
+#main_news{
+	height: 33px;
+	width: 196px;
+	font:bold 20px  "微软雅黑",Verdana, Geneva, sans-serif;
+	margin: 20px auto ;
+	border-bottom: 1px solid #d6d6d6;
+	line-height: 33px;
+	text-align: center;
+	color: red;
+}
+.sub_menu ul{
+	display: none;
+}
+.sub_menu_li{
+	background: url(../images/zhiyin.png) no-repeat left center;
+}
+.sub_menu_li a:hover{
+	background: url(../images/zhi_yin.png) no-repeat left center;
+}
+ .main_left p{
+	width:176px;
+	height: 35px;
+	font: 14px  "微软雅黑",Verdana, Geneva, sans-serif  ;
+	position: relative;
+	left: 20px;
+	border-bottom: 1px dashed #d6d6d6;
+	line-height: 35px;
+	/* background: url(../images/zhiyin.png) no-repeat left center; */
+}
+.main_left p a{
+	padding-left: 20px;
+	color: black;
+	display: block;
+} 
+.sub_menu div{
+	width: 196px;
+	padding-left: 27px;
+	display: none;
+}
+.pan{
+	width: 196px;
+	padding-left: 27px;
+}
+.menu_active{
+	background-color:#ff0000;
+	color: white !important;
+}
+.main_right1{
+	width: 800px;
+	background: #fdfcfc;
+	margin: 10px 10px 10px 0;
+	float: left;
+}
+.main_right1 li{
+	}
+
+.breadcrumb{
+	width: 745px;
+	height: 43px;
+	border-bottom: 1px solid #d6d6d6;
+	margin: 10px auto;
+	background: url(../images/home.png) no-repeat 34px 23px;
+}
+.breadcrumb ul{
+	width: 665px;
+	margin: 0 auto;
+	padding-left: 25px;
+}
+.breadcrumb li{
+	margin-top: 22px;
+	float: left;
+}
+.breadcrumb li a{
+	color: black;
+}
+.breadcrumb li a:hover{
+	color: red;
+	text-decoration: underline;
+}
+.content{
+	width:700px;
+	margin: 0 auto;
+	padding-left: 20px;
+	font-size: 12px;
+}
+
+.bg_td1{
+	background: url(../images/san.png) no-repeat left center;
+}
+.li2{
+	font-family: "宋体";
+	font-size: 13px;
+	font-weight: normal;
+}
+.li3{
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: normal;
+	padding-right: 70px;
+	overflow: hidden;
+}
+.li3 a:hover{
+	color: #FF0000;
+	text-decoration: underline;
+}
+.da3{
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 16px;
+	color: #999999;
+	text-decoration: none;
+}
+.zw3 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 16px;
+	color: #999999;
+	text-decoration: none;
+}
+.pagesnums {
+	height: 26px;
+	overflow: hidden;
+	text-align: center;
+	padding: 15px 0 30px 0;
+	text-align: center;
+}
+.pagesnums table {
+	border-collapse: collapse;
+	margin: 0 auto;
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+.pagesnums ul li a {
+	border: 1px solid gray;
+	padding: 2px 6px;
+	text-align: middle;
+	line-height: 16px;
+	float: left;
+	height: 16px;
+	margin: 0 2px;
+}
+.pagesnums ul li {
+	display: block;
+	float: left;
+	height: 22px;
+	line-height: 21px;
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.pagesnums ul li a,.pagesnums .none {
+	display: block;
+	float: left;
+	height: 22px;
+	line-height: 21px;
+	background-repeat: repeat-x;
+	background-position: left top;
+	border-color: #E1E3EF #BFC7D8 #BFC7D8 #E1E3EF;
+	border-style: solid;
+	border-width: 1px;
+}
+.pagesnums ul li a:hover {
+	background-position: left -25px;
+	text-decoration: none;
+	color: #3263CA;
+	border-color: #A7EAFF #1FB3E1 #1FB3E1 #A7EAFF;
+}
+#pagenow {
+	padding: 2px 6px;
+	border:1px solid;
+	border-color: #FFA200 #E53700 #E53700 #FFA200;
+	font-weight: bold;
+}

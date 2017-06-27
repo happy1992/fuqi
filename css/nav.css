@@ -1,0 +1,188 @@
+/* 首页头部 CSS */
+.header{
+	height: 175px;
+	width:100%;
+	background-image: url(../images/fq0001.png) ;
+	/* overflow: hidden; */
+}
+.header_fq4{
+	background-image: url(../images/fq0001.png) ;
+}
+.header img{
+	display: block;
+	margin: 0 auto;
+}
+/* 搜索框 CSS */
+.h_se{
+	position: absolute;
+	right: 0px;
+	top: 105px;
+	opacity: 0.95;
+}
+.search{
+	width: 280px;
+	height: 30px;
+	background: white;
+	border: 1px solid black;
+	/* background: url(../images/search.png) no-repeat; */
+}
+.search input {
+	height: 27px;
+	line-height: 27px;
+	width: 146px;
+	border: 0;
+	background: none;
+	font:14px "Microsoft Yahei","微软雅黑",Verdana, Geneva, sans-serif; 
+	margin-right: 1px;
+	font-size: 14px;
+	outline: none;
+}
+.search span{
+	width: 50px;
+	height: 30px;
+	background: #2d2d2c;
+	position: absolute;
+	border: none;
+	font:14px "Microsoft Yahei","微软雅黑",Verdana, Geneva, sans-serif; 
+	color: white;
+}
+.search span:hover{
+	background: #1c1c1c;
+}
+#searchSub{
+	width: 50px;
+	height: 30px;
+	background:url(../images/search1.png) no-repeat center;
+	position: absolute;
+	border: none;
+	display: block;
+	cursor: pointer;
+}
+.tn_s_button button {
+	border: none;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+/* 导航 CSS */
+.nav{
+	height: 45px;
+	width: 100%;
+	background-image: url(../images/fq002.png) ;
+	position: relative;
+}
+.nav_fq1{
+	background-image: url(../images/fq002.png) ;
+}
+.nav li{
+	float: left;
+	height: 45px;
+}
+.nav li a{
+	color: #b5b5b5;
+	font:bold 16px  "微软雅黑",Verdana, Geneva, sans-serif;
+	line-height: 45px;
+	text-align: center;
+	display: block;
+}
+.nav li a:hover{
+	background: #da251c;
+	color: white;
+	line-height: 45px;
+	text-align: center;
+	display: block;
+}
+.menuitem{
+	color: white !important;
+	background: #da251c;
+}
+.a1{
+	width: 130px;
+}
+.a2{
+	width: 140px;
+}
+.a3{
+	width: 136px;
+}
+.a4{
+	width: 140px;
+}
+.a5{
+	width: 134px;
+}
+.a6{
+	width: 134px;
+}
+.a7{
+	width: 130px;
+}
+.a8{
+	width: 136px;
+}
+.fq_1{
+	margin: 0 auto;
+	width: 1080px;
+	height: 100%;
+}
+.fq_4{
+	margin: 0 auto;
+	width: 1080px;
+	height: 100%;
+	padding: 0px;
+	position: relative;
+}
+#fq_1 li{
+	font: 16px white;
+}
+.xiala{
+	display: none;
+	position: relative;
+	z-index: 9998;
+}
+.a3 li{
+	clear: left;
+	width: 136px;
+	background:#1f2024;
+	border-bottom: 1px solid #353539;
+	
+}
+.a3 li a{
+	width: 136px;
+	text-align: center;
+}
+.a5 li{
+	clear: left;
+	width: 134px;
+	background:#1f2024;
+	border-bottom: 1px solid #353539;
+
+}
+.a5 li a{
+	width: 134px;
+	text-align: center;
+	
+}
+.a7 li{
+	clear: left;
+	width: 130px;
+	background:#1f2024;
+	border-bottom: 1px solid #353539;
+	
+}
+.a7 li a{
+	width: 130px;
+	text-align: center;
+}
+.a8 li{
+	clear: left;
+	width: 136px;
+	background:#1f2024;
+	border-bottom: 1px solid #353539;
+	
+}
+.a8 li a{
+	width: 136px;
+	text-align: center;
+}

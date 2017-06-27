@@ -1,0 +1,19 @@
+.content_art{
+	width:700px;
+	margin: 0 auto;
+	font-size: 12px;
+	padding-bottom: 30px;
+}
+.cont_li1{
+	list-style-type: disc;
+	font-size: 14px;
+	line-height: 19px;
+}
+.cont_li1 a{
+	color: blue;
+	text-decoration: underline;
+}
+
+.wre{
+	padding: 10px 0;
+}

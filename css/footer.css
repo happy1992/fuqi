@@ -1,0 +1,84 @@
+/* 底部 CSS */
+.footer{
+	width: 100%;
+	background-image: url(../images/fq004.png) ;
+	margin: 0;
+	padding: 0;
+}
+#footer_1{
+	height: 200px;
+	padding-bottom: 30px;
+	border-bottom: 2px solid #222222;
+	background-image: url(../images/fq004.png) ;
+}
+.footer h2{
+	height: 25px;
+	line-height: 25px;
+	margin-bottom: 10px;
+	color: #f5f5f5;
+}
+.footer li a{
+	color: #b5b5b5;
+	line-height: 24px;
+}
+.footer li a:hover{
+	color: red;
+	text-decoration: underline;
+}
+#weixin{
+	width: 220px;
+	height: 150px;
+	padding-top: 20px;
+	background: url(../images/weixin.jpg) no-repeat  0 60px;
+	float: left;
+}
+.about_us{
+	width: 145px;
+	height: 150px;
+	padding-top: 20px;
+	float: left;
+	overflow: hidden;
+}
+.link_us{
+	width: 165px;
+	height: 150px;
+	padding-top: 20px;
+	float: left;
+	overflow: hidden;
+}
+.attention_us{
+	width: 165px;
+	height: 150px;
+	padding-top: 20px;
+	float: left;
+	overflow: hidden;
+}
+#copyright{
+	width: 375px;
+	height: 100px;
+	padding-top: 20px;
+	float: left;
+	overflow: hidden;
+}
+/* 底部备案 CSS */
+#copyright p{
+	color: #b5b5b5;
+}
+.phone{
+	float: left;
+	color: #b5b5b5;
+	margin: 5px;
+}
+.copyright{
+	width: 1080px;
+	border-top: 2px solid #343434;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #b5b5b5;
+	margin: 0 auto;
+	background-image: url(../images/fq004.png) ;
+}
+.copyright_p{
+	width: 400px;
+	margin: 0 auto;
+}
