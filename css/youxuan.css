@@ -4,7 +4,7 @@
 	height: 100%;
 	background:#1c1c1c;
 	position: fixed;
-	z-index: 70;
+	z-index: 1170;
 	right: 0px;
 	border: none;
 }
@@ -25,7 +25,7 @@
 .iphone{
 	width: 14px;
 	height: 21px;
-	background: url(../images/phone.png) no-repeat;
+	background: url(../images/css_sprites.png) no-repeat -5px -331px;
 	margin: 0 auto;
 }
 #you_ma{
@@ -69,6 +69,12 @@
 	background: url(../images/d1.png);
 	display: none;
 }
+.bg-app_weixin{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background:url(../images/css_sprites.png) -301px -5px;
+}
 .youxuan_kjzc{
 	width: 237px;
 	height: 200px;
@@ -102,10 +108,10 @@
 	cursor: pointer;
 	text-align: center;
 }
-.youxuan_gl_b img{
+/* .youxuan_gl_b img{
 	display: block;
 	margin: 0 auto;
-}
+} */
 .youxuan_gl_b p{
 	margin: 0 auto;
 	width: 24px;
@@ -118,10 +124,16 @@
 	background: red;
 }
 .youxuan_gl_b_top{
-	
+	display: inline-block;
+	width: 100%;
+	height: 15px;
+	background: url(../images/css_sprites.png) -210px -276px;
 }
 .youxuan_gl_b_close{
-	
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background: url(../images/css_sprites.png) -150px -276px;
 }
 /* 便民服务 CSS */
 .con_min{

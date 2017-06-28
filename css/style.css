@@ -33,49 +33,54 @@
 .saishi_top{
 	width: 286px;
 	height: 216px;
-	background-image: url(../images/saishiyugao.png);
+	background: url(../images/css_sprites.png) no-repeat -5px -5px;
 	margin: 6px auto;
 }
 .dua_l{
-	width: 286px;
-	height: 148px;
+	width: 256px;
+	height: 123px;
 	position: relative;
-	left: 0px;
-	top: 30px;
+	left: 15px;
+	top: 45px;
 	overflow: hidden;
+}
+.dua_tittle{
+	width: 800px;
+	height: 30px;
+	position: absolute;
+	left: 0px;
 }
 .dua_l h1{
-	margin: 0 auto;
-	padding-top: 15px;
+	/* width: 286px; */
+	height: 30px;
+	color: #f01313;
 	font:bold 16px/30px "Microsoft Yahei","微软雅黑",Verdana, Geneva, sans-serif;
 	line-height: 30px;
-	color: #d0d0d0; 
-	text-align: center;
-	overflow: hidden;
-	width: 286px;
-	height: 30px;
-	overflow: hidden;
+	float: left;
+}
+.dua_l h2{
+	margin-top: 30px;
 }
 .dua_l h2,h3{
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	font:bold 16px/25px "Microsoft Yahei","微软雅黑",Verdana, Geneva, sans-serif;
 	line-height: 25px;
 	color: #d0d0d0; 
 	text-align: center;
 	overflow: hidden;
-	width: 286px;
+	width: 100%;
 	height: 25px;
 	overflow: hidden;
 }
 .dua_l p{
-	padding: 10px 15px;
-	font:12px/18px "Microsoft Yahei","微软雅黑",Verdana, Geneva, sans-serif;
-	line-height: 18px;
+	width: 100%;
+	height: 36px;
+	margin-top: 10px;
+	padding: 0 10px;
+	font:12px/16px "Microsoft Yahei","微软雅黑",Verdana, Geneva, sans-serif;
+	line-height: 16px;
 	color:#d0d0d0; 
 	overflow: hidden;
-	text-align: center;
-	width: 256px;
-	height: 28px;
 }
 #saishi_time{
 	width: 290px;
@@ -115,37 +120,34 @@
 	overflow: hidden;
 }
 #part_2{
-	width: 540px;
-	height: 325px;
+	width: 500px;
+	height: 285px;
 	background-image: url(../images/d2.png);
 	margin:10px 10px 0 0;
+	padding: 20px;
 	float: left;
 	overflow: hidden;
 }
-	.tittle{
-		height: 55px;
-		width: 550px;
-	}
-	#post{
-		width: 505px;
-	}
 	#part_2 h1{
-		margin: 16px 0 5px 16px;
+		width: 143px;
+		height: 45px;
+		background: url(../images/css_sprites.png) no-repeat -5px -276px;
 		float: left;
 	}
-	.pic_more{
-		width: 20px;
+	.part_more{
+		display: block;
+		width: 44px;
 		height:12px;
-		padding-top: 30px;
-		padding-right: 15px;
+		background: url(../images/css_sprites.png) no-repeat -327px -231px;
 		float: right;
-
+	}
+	#part_2 .part_more{
+		margin-top: 15px;
 	}
 	.news_list{
 		width: 480px;
 		height: 245px;
-		margin-left: 25px;
-		float: left;
+		margin: 0 auto;
 		overflow: hidden;
 	}
 	.news_list li{
@@ -195,23 +197,64 @@
 	overflow: hidden;
 }
 
-	#calendar{
-		width: 530px;
+	.calendar{
+		width: 510px;
 		height: 265px;
 		border: 1px solid #292929;
 		background-image: url(../images/d2.png);
 		margin-top: 4px;
+		padding: 0 10px;
 		position: relative;
 		z-index: 10px;
 		overflow: hidden;
 	}
-	.tittle2{
-		width: 510px;
-		height: 30px;
-		margin: 2.5px 10px;
-		background-image: url(../images/d2.png);
+	.cal_container{
+		width: 100%;
+		height: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
 	}
-	#calendar table{
+	.cal_container::-webkit-scrollbar{
+		width:6px;
+		background-image: url(../images/d2.png);
+		opacity: 0.1;
+	}
+	.cal_container::-webkit-scrollbar-thumb{
+		background-color:gray;
+		border-radius:10px;
+	}
+	.calendar ul{
+		width: 100%;
+		height: 30px;
+		margin: 2.5px 0px;
+		background-image: url(../images/d2.png);
+		color: #ffffff;
+		text-align: center;
+		line-height: 30px;
+	}
+	.calendar ul li{
+		float: left;
+		overflow: hidden;
+	}
+	.item1{
+		width: 66px;
+	}
+	.item2{
+		width: 66px;
+	}
+	.item3{
+		width: 110px;
+	}
+	.item4{
+		width: 80px;
+	}
+	.item5{
+		width: 110px;
+	}
+	.item6{
+		width: 65px;
+	}
+	/* .calendar table{
 		height: 265px;
 		line-height: 33px;
 		color: #fff;
@@ -222,42 +265,32 @@
 		top: 0px;
 		left: 5px;
 		border-collapse: collapse;
-	}
-	.tr_color{
+		overflow: scroll;
+	} */
+	.calendar .tittle_first{
 		font: bold;
 		color: #ffeb01;
 	}
 
-
 #part_4{
-	width:320px;
-	height: 260px;
+	width:290px;
+	height: 230px;
 	background-image: url(../images/d2.png);
 	margin:10px 5px 0 0;
+	padding: 15px;
 	float: left;
 }
-	.tittle3{
-		height: 40px;
-		width: 290px;
-	}
-	.pic_1{
+	#part_4 h1{
 		width: 47px;
-		height:15px;
-		padding-top: 15px;
-		padding-left: 15px;
+		height: 25px;
+    	background: url(../images/css_sprites.png) no-repeat -270px -231px;
 		float: left;
 	}
-	.pic_2{
-		width: 20px;
-		height:12px;
-		padding-top: 17px;
-		padding-right: 15px;
-		float: right;
+	#part_4 .part_more,#part_5 .part_mor{
+		margin-top: 3px;
 	}
 	#pictures{
 		height: 184px;
-		padding: 0 10px 15px 10px;
-		
 	}
 	#pictures td{
 		
@@ -268,61 +301,42 @@
 
 	}
 #part_5{
-	width: 350px;
-	height: 260px;
+	width: 320px;
+	height: 230px;
 	background-image: url(../images/d2.png);
 	margin:10px 5px 0 0;
+	padding: 15px;
 	float: left;
 }
-	.tittle4{
-		height: 40px;
-		width: 320px;
-	}
-	.pic_3{
-		width: 47px;
-		height:15px;
-		padding-top: 15px;
-		padding-left: 15px;
+	#part_5 h1{
+		width: 49px;
+		height: 25px;
+    	background: url(../images/css_sprites.png) no-repeat -211px -231px;
 		float: left;
 	}
 	#video{
 		width: 320px;
 		height: 195px;
-		padding: 5px 15px 15px 15px;
-		position: relative;
-		
-	}
-	#video span {
-		width: 48px;
-		height: 48px;
-		position: absolute;
-		background: url(../images/void_png.png) ;
-		left: 153px;
-		top: 70px;
-		z-index: 299;
+		margin-top: 30px;
 	}
 #part_6{
-	width: 400px;
-	height: 260px;
+	width: 370px;
+	height: 230px;
 	background-image: url(../images/d2.png);
 	margin:10px 0 0 0;
+	padding: 15px;
 	float: left;
 }
-#tittle5{
-	height: 40px;
-	width: 370px;
-}
-.pic_4{
-	width: 47px;
-	height:15px;
-	padding-top: 15px;
-	padding-left: 15px;
-	float: left;
+	#part_6 h1{
+		width: 94px;
+		height: 15px;
+    	background: url(../images/css_sprites.png) no-repeat -301px -190px;
+		float: left;
 	}
 #map{
 	width:370px;
 	height: 193px;
-	margin: 5px 15px;
+	margin-top: 30px;
 	overflow: hidden;
 	position: relative;
 }

@@ -62,10 +62,12 @@
 	display: none;
 }
 .sub_menu_li{
-	background: url(../images/zhiyin.png) no-repeat left center;
+	background: url(../images/css_sprites.png) no-repeat -381px -218px;/* 
+	background: url(../images/zhiyin.png) no-repeat left center; */
 }
 .sub_menu_li a:hover{
-	background: url(../images/zhi_yin.png) no-repeat left center;
+	background: url(../images/css_sprites.png) no-repeat -5px -231px;/* 
+	background: url(../images/zhi_yin.png) no-repeat left center; */
 }
  .main_left p{
 	width:176px;
@@ -108,16 +110,23 @@
 	width: 745px;
 	height: 43px;
 	border-bottom: 1px solid #d6d6d6;
-	margin: 10px auto;
-	background: url(../images/home.png) no-repeat 34px 23px;
+	margin: 10px auto;/* 
+	background: url(../images/home.png) no-repeat 34px 23px; */
+}
+.bred_icon{
+	display:block;
+	width: 18px;
+	height: 15px;
+    background: url(../images/css_sprites.png) no-repeat -405px -189px;
+    float: left;
 }
 .breadcrumb ul{
-	width: 665px;
+	width:100%;
 	margin: 0 auto;
+	padding-top: 23px;
 	padding-left: 25px;
 }
 .breadcrumb li{
-	margin-top: 22px;
 	float: left;
 }
 .breadcrumb li a{

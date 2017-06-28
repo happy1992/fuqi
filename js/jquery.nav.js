@@ -20,7 +20,7 @@ $(function(){
 	    $("html,body").animate({scrollTop:0}, 300);
 	}); 
 	/*关闭右悬框 js*/
-	$("#youxuan_gl_b_close").click(function(){
+	$(".youxuan_gl_b:eq(1)").click(function(){
 		$(".youxuan:eq(0)").animate({right:"-36px"},300);
 		$(".con_min:eq(0)").animate({right:"0px"},300);
 	});
