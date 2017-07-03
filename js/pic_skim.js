@@ -1,28 +1,69 @@
 $(function(){
 	/*鸽王图片切换*/
-	$("#efpRightArea").click(function(){
-		var $cont_st_ul=$(".cont_st ul");
-		var $cont_st_li=$(".cont_st ul li").length;
-		var leftstan=parseInt($cont_st_ul.css("left"));
-		if(leftstan <= (-10-($cont_st_li-1)*740)){
-			alert("后面没有了");
-		}else{
-			if (!$cont_st_ul.is(":animated")) {
-				$cont_st_ul.animate({left:(leftstan-740+"px")},200);
+	var $cont_st_ul = $(".cont_st ul");   //大图容器
+	var $cont_st_li = $(".cont_st ul li").length;
+	var $contst_li_len = $(".cont_st").width();
+	var $swp_list_ul = $(".swp_list_ul");      //缩略图容器
+	var $swp_list_li = $(".swp_list_ul li");      //缩略图容器
+	var $swp_li_len = $(".swp_list_cont li").outerWidth();  //缩略图子元素宽度
+	var countP = 0;
+	var leftstan = parseInt($cont_st_ul.css("left"));   //大图距其父级左边距离
+	var leftli = parseInt($swp_list_ul.css("left"));	//缩略图图距其父级左边距离
+	var thu = 0;  //缩略图计数
+	$(".arrRight").click(function(){
+		if (!$cont_st_ul.is(":animated")) {
+			if(leftstan <= (-($cont_st_li-1)*$contst_li_len)){
+				alert("这是最后一张了");
+			}else{
+				leftstan -= $contst_li_len;
+				countP++;
+				$cont_st_ul.stop().animate({left:(leftstan+"px")},200);   //大图向右偏移
+				$swp_list_ul.stop().animate({left:(leftli+"px")},200);   //缩略图位置重置
+				$swp_list_li.removeClass('pj').eq(countP).addClass('pj');
+				if(countP > 3 && $swp_list_li.length > 5 && countP < $swp_list_li.length-1){   //判断缩略图位置
+					leftli -= $swp_li_len;
+					$swp_list_ul.stop().animate({left:(leftli+"px")},200);
+				}
 			};
 		};
 	});
-	$("#efpLeftArea").click(function(){
-		var $cont_st_ul=$(".cont_st ul");
-		var $cont_st_li=$(".cont_st ul li").length;
-		var rightstan=parseInt($(".cont_st ul").css("left"));
-		if(rightstan == -10){
-			alert("前面没有了");
-		}else{
-			if (!$cont_st_ul.is(":animated")) {
-				$cont_st_ul.animate({left:(rightstan+740+"px")},200);
+	$(".arrLeft").click(function(){
+		if (!$cont_st_ul.is(":animated")) {
+			if(leftstan >= 0){
+				alert("这已经是第一张了");
+			}else{
+				leftstan += $contst_li_len;
+				countP--;
+				$cont_st_ul.stop().animate({left:(leftstan+"px")},200);   //大图向左偏移
+				/*$swp_list_ul.animate({left:(leftli+"px")},200);*/
+				$swp_list_ul.stop().animate({left:(leftli+"px")},200);   //缩略图位置重置
+				$swp_list_li.removeClass('pj').eq(countP).addClass('pj');   //判断缩略图位置
+				if(leftli !=0 && countP < $swp_list_li.length-2){
+					leftli += $swp_li_len;
+					$swp_list_ul.stop().animate({left:(leftli+"px")},200);
+				}
 			};
 		};
-		console.log(rightstan-740+"px");
+	});
+	/*缩略图移动*/
+	$(".skim_right").on("click",function(){
+		if (!$swp_list_ul.is(":animated")) {
+			if((parseInt($swp_list_ul.css("left"))+$swp_li_len*$swp_list_li.length) <= $swp_list_ul.parent().width()){
+				return false;
+			} else {
+				thu -= $swp_li_len*2;
+				$swp_list_ul.stop().animate({left:(thu+"px")},200);
+			};
+		};
+	});
+	$(".skim_left").on("click",function(){
+		if (!$swp_list_ul.is(":animated")) {
+			if (-thu < $swp_li_len*2) {
+				$swp_list_ul.css("left","0px");
+			} else {
+				thu += $swp_li_len*2;
+				$swp_list_ul.stop().animate({left:(thu+"px")},200);
+			};
+		};
 	});
 });

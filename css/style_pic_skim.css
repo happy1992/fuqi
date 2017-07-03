@@ -2,67 +2,58 @@
 	width: 750px;
 	margin: 0 auto;
 	padding-bottom: 30px;
+	overflow: hidden;
 }
 .cont_skim_ta{
 	background: #eee;
-	overflow: hidden;
 	padding: 20px 10px;
 	position: relative;
-}
-.cont_skim_ta ul{
-	width: 94440px;
-	position: relative;
-	left: -10px;
-}
-.content_art_skim{
-	width: 747px;
-	height: auto;
 	overflow: hidden;
 }
-.cont_skim_ta li{
-	margin-left: 10px;
-	float: left;
-}
+/* 图片容器 */
 .cont_st{
 	width: 100%;
 	height: 506px;
+	overflow: hidden;
 	position: relative;
+}
+.cont_st ul{
+	width: 94440px;
+	height: auto;
+	position: absolute;
+}
+.cont_st li{
+	margin: 0;
+	padding: 0;
+	float: left;
 }
 .cc00 {
 	color: #c00;
 }
-#efpLeftArea {
-	z-index: 9;
+.efArea {
+	z-index: 9;/* 
 	background: #fff;
-	FILTER: Alpha(Opacity=0);
-	left: 0px;
+	FILTER: Alpha(Opacity=0); */
 	width: 50%;
 	position: absolute;
-	top: 0px;
-	height: 100%;
-	opacity: 0;
+	top: 20px;
+	height: 506px;/* 
+	opacity: 0; */
 }
 .arrLeft {
+	left: 0px;
 	cursor: url(../images/arr_left.cur),auto;
 }
-#efpRightArea {
-	z-index: 9;
-	right: 0px;
-	background: #fff;
-	FILTER: Alpha(Opacity=0);
-	width: 50%;
-	position: absolute;
-	top: 0px;
-	height: 100%;
-	opacity: 0;
-}
 .arrRight {
+	right:0;
 	cursor: url(../images/arr_right.cur),auto;
 }
+
+/* 缩略图容器 */
 .cont_page{
 	margin-top: 20px;
 }
-.describe{
+/* .describe{
 	padding: 10px 6px 10px 6px;
 }
 .describe div{
@@ -75,10 +66,7 @@
 	margin: 0 10px 0 0;
 	padding-right: 10px;
 }
-{
-	width:50px;
-	margin-right:10px; 
-}
+
 .descibe_to em {
 	color:#c00;
 	font-size: 24px;
@@ -89,8 +77,8 @@
 	overflow: hidden;
 	font: 16px/28px  'Microsoft Yahei','微软雅黑',Arial, Helvetica, sans-serif;
 	color:#666;
-}
-.skim_up{
+} */
+/* .skim_up{
 	float: left;
 	display: inline;
 	width: 100px;
@@ -133,8 +121,8 @@
 	left: 0;
 	width: 106px;
 	text-align: center;
-}
-.bg{
+} */
+/* .bg{
 	border: 1px solid #DEDFE3;
 	display: block;
 	width: 95px;
@@ -154,70 +142,102 @@
 	left: 4px;
 	top: 4px;
 	z-index:1;
-}
-.skim_left{
+} */
+/* 向前向后按钮 */
+.skim_left,.skim_right{
 	width: 25px;
 	height: 120px;
-	background: white;
+	background: white;/* 
+	text-align: center; */
+	position: relative;
 	display: block;
+	cursor:pointer;/* 
+	vertical-align:middle; */
+}
+.skim_left{
 	float: left;
 	border-radius: 10px 0 0 10px;
 }
-.skim_left:hover{
-	background: #c8c8cd;
+.skim_left:hover i{
+	background:url(../images/css_sprites.png) no-repeat -97px -331px;
 }
-.skim_right:hover{
-	background: #c8c8cd;
+.skim_right:hover i{
+	background:url(../images/css_sprites.png) no-repeat -51px -331px;
 }
-.skim_left img{
+/* .skim_left img{
 	display: block;
 	margin: 0 auto;
 	margin-top: 50px;
-}
-.skim_right{
+} */
+.skim_right{/* 
 	width: 25px;
 	height: 120px;
 	background: white;
 	display: block;
-	float: left;
+	text-align: center; */
+	float: right;
 	border-radius: 0 10px 10px 0;
 }
-.skim_right img{
+.skim_right i,.skim_left i{
+	width: 12px;
+	height: 20px;
+	display: block;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-top:-10px;
+	margin-left: -6px;
+}
+.skim_right i{
+	background:url(../images/css_sprites.png) no-repeat -29px -331px;
+}
+.skim_left i{
+	background:url(../images/css_sprites.png) no-repeat -75px -331px;
+	
+}
+/* .skim_right img{
 	display: block;
 	margin: 0 auto;
 	margin-top: 50px;
-}
-.skim_pass ul {
-	float: left;
-	width: 1900px;
-	overflow: hidden;
-}
-.swp-list-cont {
+} */
+/* 缩略图 */
+.swp_list_cont {
+	width: 668px;
 	height: 120px;
 	float: left;
 	display: inline;
 	margin: 0 5px;
 	overflow: hidden;
+	position: relative;
 }
-.swp-list-cont ul li{
-	float: left;
-	margin: 30px 1.5px;
+.swp_list_cont ul {
+	width: 9999px;
+	position: absolute;
 }
-.swp-list-cont ul li a{
-	width: 88px;
-	height: 68px;
-	display: block;
+.swp_list_cont ul li{
+	/* display: inline-block;
+	*display:inline;     兼容IE
+	*zoom:1; */
+	padding: 20px 5px;
+	width: 108px;
+	height: 100%;
 	text-align: center;
-	vertical-align: middle;
-	line-height: 64px;
+	/* vertical-align: middle; */
 	float: left;
 }
-.swp-list-cont ul li a img{
-	vertical-align: middle;
+.swp_list_cont ul li a{
+	display:block;
 }
-.swp-list-cont ul li a:hover{
-	background: #ffbf36;
+.swp_list_cont ul li a img{
+	/* vertical-align: middle; */
 }
-.pj{
-	background: #ffbf36;
+.swp_list_cont ul li:hover{
+	/* background: #ffbf36; */
+}
+.swp_list_cont ul .pj a{
+	border: 4px solid #ffbf36;
+	/* background: #ffbf36; */
+}
+.swp_list_cont ul li a:hover{
+	border: 4px solid #ffbf36;
 }
