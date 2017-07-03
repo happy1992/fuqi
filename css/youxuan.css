@@ -56,6 +56,8 @@
 	height: 60px;
 
 }
+
+/* 扫码关注  css */
 .app_weixin img{
 	display: block;
 	margin: 0 auto;
@@ -75,16 +77,20 @@
 	height: 100%;
 	background:url(../images/css_sprites.png) -301px -5px;
 }
+
+/* 空距自测  css */
 .youxuan_kjzc{
 	width: 237px;
-	height: 200px;
-	padding: 10px;
+	height: 150px;
+	padding: 20px;
 	position: relative;
-	right: 257px;
+	right: 277px;
 	top: -70px;
 	background: url(../images/d1.png);
 	display: none;
 	}
+
+/* 天气预报  css */
 .app_weather{
 	width: 160px;
 	height: 280px;
@@ -94,6 +100,8 @@
 	background: url(../images/d1.png);
 	display: none;
 }
+
+/* 右悬框底部  css */
 .youxuan_bottom{
 	width: 100%;
 	position:absolute;
@@ -135,6 +143,7 @@
 	height: 100%;
 	background: url(../images/css_sprites.png) -150px -276px;
 }
+
 /* 便民服务 CSS */
 .con_min{
 	width: 80px;

@@ -4,43 +4,140 @@
 <title>新建网页</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="布尔教育 http://www.itbool.com" />
-<style>
-	div{
-		width: 500px;
-		height: 200px;
-		overflow-x:hidden;
-		overflow-y:auto; 
-	}
-div::-webkit-scrollbar{
-width:6px;
-background-color:transparent;
-} 
-div::-webkit-scrollbar-thumb{
-background-color:#EEE;
-border-radius:10px;
-}
-div::-webkit-scrollbar-thumb:hover{
-background-color:#EEE;
-}/* 
-div::-webkit-scrollbar-thumb:active{
-background-color:#A6393D;
-border:1px solid #333333;
-} */
-table{
-	width: 100px;
-	height: 100px;
-	overflow: hidden;
-}
-</style>
 </head>
 <body>
-    <h1>这是h1</h1>
+    <div>
+        两点空距计算结果
+        <input type="text" class="distance" size="10" value="">公里 <br><br>
+        起点经度 
+        <input type="text" class="startLongi" size="1" maxlength="3" value="">度 
+        <input type="text" class="startLongi" size="1" maxlength="3" value="">分 
+        <input type="text" class="startLongi" size="3" maxlength="6" value="">秒 <br>
+        起点纬度 
+        <input type="text" class="startLagi" size="1" maxlength="3" value="">度 
+        <input type="text" class="startLagi" size="1" maxlength="3" value="">分
+        <input type="text" class="startLagi" size="3" maxlength="6" value="">秒<br> 
+        终点经度 
+        <input type="text" class="endLongi" size="1" maxlength="3" value="">度
+        <input type="text" class="endLongi" size="1" maxlength="3" value="">分 
+        <input type="text" class="endLongi" size="3" maxlength="6" value="">秒<br> 
+        终点纬度 
+        <input type="text" class="endLagi" size="1" maxlength="3" value="">度 
+        <input type="text" class="endLagi" size="1" maxlength="3" value="">分 
+        <input type="text" class="endLagi" size="3" maxlength="6" value="">秒<br><br>
+        <input type="button" value="提交" class="yx_btn">
+        <input type="reset" value="清空" class="cClear">  
+        <input type="button" class="setDef" value="福齐俱乐部">
+    </div>
 </body>
-<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
 <script>
-    $(function(){
-        var h=$('h1').text();
-        console.log(h);
-    })
+    var countDis1 = new countDis({
+        startLon:'.startLongi',   //起点经度框
+        startLa:'.startLagi',    //起点纬度框
+        endLon:'.endLongi',   //终点经度框
+        endLa:'.endLagi',    //终点纬度框
+        distance:'.distance',   //计算结果框
+        subM:'.yx_btn',    //提交框
+        reset:'.cClear',  //重置框
+        defau:'.setDef'    //设置默认值框
+    });
+    
+    function countDis(obj){
+        var that = this;
+        that.startLon = $(obj.startLon);   //起点经度框
+        that.startLa = $(obj.startLa);   //起点纬度框
+        that.endLon = $(obj.endLon);    //终点经度框
+        that.endLa = $(obj.endLa);    //终点纬度框
+        that.distance = $(obj.distance);   //计算结果框
+        that.subM = $(obj.subM);    //提交框
+        that.reset = $(obj.reset);    //重置框
+        that.defau = $(obj.defau);    //设置默认值框
+        that.init = function(){
+            //为提交框绑定事件
+            that.subM.on('click',that.count);
+
+            //为重置框绑定事件
+            that.reset.on('click',that.res);
+
+            //为设置默认值框绑定事件
+            that.defau.on('click',that.def);
+        };
+
+        //计算距离
+        that.count = function (){
+            var startLongi = rad(getVal(that.startLon));   //起点经度
+            var startLagi = rad(getVal(that.startLa));    //起点纬度
+            var endLongi = rad(getVal(that.endLon));   //终点经度
+            var endLagi = rad(getVal(that.endLa));    //终点纬度
+            var a = startLagi - endLagi;   //两点纬度之差
+            var b = startLongi - endLongi;   //两点经度之差
+            var distance = 2*Math.asin(Math.sqrt(Math.pow(Math.sin(a/2),2)+Math.cos(startLagi)*Math.cos(endLagi)*Math.pow(Math.sin(b/2),2))) * 6378.137;
+            distance = Math.round(distance*10000)/10000; 
+            that.distance.val(distance);
+        };
+
+        //重置事件
+        that.res = function (){
+            $(this).parent().find('input[type=text]').val('');
+        }
+
+       //设置默认经纬度
+        that.def = function (){
+            var arr1=[114,17,44];
+            var arr2=[30,34,56];
+            for (var i = 0; i < that.endLon.length; i++) {
+                that.endLon.eq(i).val(arr1[i]);
+            };
+            for (var i = 0; i < that.endLa.length; i++) {
+                that.endLa.eq(i).val(arr2[i]);
+            };
+        }
+
+
+        //获得经纬度数值
+        function getVal(m){
+            var arr=[];
+            for (var i = 0; i < m.length; i++) {
+                arr.push(m.eq(i).val());
+            };
+            return swm.apply(null,arr);
+        }
+
+        //将度分秒转换成度
+        function swm(a,b,c){
+            var deg =a * 1 +( c*1 + b*60 )/3600 ;
+            return deg;
+        }
+
+        //经纬度转换成三角函数中度分表形式
+        function rad(d){
+           return d * Math.PI / 180.0;
+        }
+
+        that.init();
+    }
+
+    /*var radLat1 = rad(lat1);
+    var radLat2 = rad(lat2);
+    var a = radLat1 - radLat2;
+    var  b = rad(lng1) - rad(lng2);
+    var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a/2),2) +
+    Math.cos(radLat1)*Math.cos(radLat2)*Math.pow(Math.sin(b/2),2)));
+    s = s *6378.137 ;// EARTH_RADIUS;
+    s = Math.round(s * 10000) / 10000;*/
+    /*30°34′40.54″
+    114.29972222222223
+    30.595
+    114.28138888888888
+    30.578055555555554
+
+    
+    114°17′59″
+    30°35′42″
+    114°16′53″
+    30°34′41″
+    */
+
 </script>
 </html>

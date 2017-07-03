@@ -4,7 +4,7 @@
 <title>武汉福齐赛鸽俱乐部</title>
 <link href="./images/tittle.jpg" rel="shortcut icon" type="image/x-icon">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="布尔教育 http://www.itbool.com" />
+<meta name="description" content="福齐赛鸽" />
 <link rel="stylesheet" href="./css/initialize.css" />
 <link rel="stylesheet" href="./css/style_newest.css" />
 <link rel="stylesheet" href="./css/style_newest_pic.css" />
@@ -13,9 +13,8 @@
 <link rel="stylesheet" href="./css/youxuan.css" />
 <link rel="stylesheet" href="./css/nav.css" />
 <link rel="stylesheet" href="./css/footer.css" />
-<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
 <script src="./js/jquery.nav.js"></script>
-<script src="./js/yxclose.js"></script>
 <script src="./js/right_nav.js"></script>
 </head>
 <body>
@@ -34,31 +33,27 @@
 		<div class="youxuan_gl" id="you_ju">
 			<p>空距自测</p>
 			<div class="youxuan_kjzc">
-				<form method="POST" name="jskj1" action="index.php">
-					<tbody>
-						<tr>
-							<td width="10"> </td>
-							<td width="100%" height="30" valign="top" bgcolor="#FFFFFF" class="tbl_zi"><br>
-								两点空距计算结果<input type="text" name="DISTANCE-wh" size="10" value="">公里 <br><br>
-								起点经度 <input type="text" name="startLongi_d" size="1" maxlength="3" value="">度 
-								<input type="text" name="startLongi_m" size="1" maxlength="3" value="">分 
-								<input type="text" name="startLongi_s" size="3" maxlength="6" value="">秒 <br>
-								起点纬度 <input type="text" name="startLagi_d" size="1" maxlength="3" value="">度 
-								<input type="text" name="startLagi_m" size="1" maxlength="3" value="">分
-								<input type="text" name="startLagi_m" size="3" maxlength="6" value="">秒<br> 
-								终点经度 <input type="text" name="endLongi_d" size="1" maxlength="3" value="">度
-								<input type="text" name="endLongi_m" size="1" maxlength="3" value="">分 
-								<input type="text" name="endLongi_s" size="3" maxlength="6" value="">秒<br> 
-								终点纬度 <input type="text" name="endLagi_d" size="1" maxlength="3" value="">度 
-								<input type="text" name="endLagi_m" size="1" maxlength="3" value="">分 
-								<input type="text" name="endLagi_s" size="3" maxlength="6" value="">秒<br><br>
-								<input type="submit" value="提交" name="B1">
-								<input type="reset" value="清空" name="B2">	
-								<input type="button" onclick="setfuqijwd();" value="福齐俱乐部">
-							</td> 
-						</tr>  
-					</tbody>
-				</form>
+				两点空距计算结果
+				<input type="text" class="distance" size="10" value="">公里 <br><br>
+				起点经度 
+				<input type="text" class="startLongi" size="1" maxlength="3" value="">度 
+				<input type="text" class="startLongi" size="1" maxlength="3" value="">分 
+				<input type="text" class="startLongi" size="3" maxlength="6" value="">秒 <br>
+				起点纬度 
+				<input type="text" class="startLagi" size="1" maxlength="3" value="">度 
+				<input type="text" class="startLagi" size="1" maxlength="3" value="">分
+				<input type="text" class="startLagi" size="3" maxlength="6" value="">秒<br> 
+				终点经度 
+				<input type="text" class="endLongi" size="1" maxlength="3" value="">度
+				<input type="text" class="endLongi" size="1" maxlength="3" value="">分 
+				<input type="text" class="endLongi" size="3" maxlength="6" value="">秒<br> 
+				终点纬度 
+				<input type="text" class="endLagi" size="1" maxlength="3" value="">度 
+				<input type="text" class="endLagi" size="1" maxlength="3" value="">分 
+				<input type="text" class="endLagi" size="3" maxlength="6" value="">秒<br><br>
+				<input type="button" value="提交" class="yx_btn">
+				<input type="reset" value="清空" class="cClear">	
+				<input type="button" class="setDef" value="福齐俱乐部">
 			</div>
 		</div>
 		<!-- 天气预告 -->
@@ -151,28 +146,28 @@
 							<div id="main_news">新闻中心&nbsp;<span>NEWS</span></div>
 							<ul class="sub_menu">
 								<li><a href="newest.html">最新公告</a></li>
-								<li class="sub_menu_d"><a>赛绩公告</a></li>
-								<div class="pannel_d">
+								<li class="sub_menu_li"><a>赛绩公告</a></li>
+								<div>
 									<p><a href="#">原榜</a></p>
 									<p><a href="#">二榜</a></p>
 									<p><a href="#">正榜</a></p>
 								</div>
 								<li><a href="#">赛事规程</a></li>
 								<li><a href="#">训放计划</a></li>
-								<li class="sub_menu_a"><a>照片</a></li>
-								<div class="pannel_a">
+								<li class="sub_menu_li"><a>照片</a></li>
+								<div>
 									<p><a href="#">赛事照片</a></p>
-									<p><a href="newest_pic.html" >鸽王照片</a></p>
+									<p><a href="newest_pic.html">鸽王照片</a></p>
 									<p><a href="#">俱乐部照片</a></p>
 								</div>
-								<li class="sub_menu_b"><a>视频</a></li>
-								<div class="pan">
-									<p><a href="newest_vid.html" class="bap">赛事视频</a></p>
+								<li class="sub_menu_li"><a>视频</a></li>
+								<div style="display:block">
+									<p><a href="newest_vid.html" class="menu_active">赛事视频</a></p>
 									<p><a href="#">赛鸽轶事</a></p>
 									<p><a href="#">鸽钟操作说明</a></p>
 								</div>
-								<li class="sub_menu_c"><a>关于我们</a></li>
-								<div class="pannel_c">
+								<li class="sub_menu_li"><a>关于我们</a></li>
+								<div>
 									<p><a href="#">俱乐部简介</a></p>
 									<p><a href="#">联系我们</a></p>
 								</div>
@@ -205,7 +200,7 @@
 										
 												<tr>
 													<td width="747px" height="521px" style="text-align: center;">
-														<embed src="http://www.tudou.com/v/JBUkUxajT3g/&amp;resourceId=0_04_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="680" height="550">
+														<embed src="http://player.youku.com/player.php/sid/XMTQyNjc5MzE0MA==/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" autostart="1" wmode="opaque" width="680" height="550">
 													</td>
 												</tr>
 												

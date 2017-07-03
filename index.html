@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="./css/youxuan.css" />
 <link rel="stylesheet" href="./css/nav.css" />
 <link rel="stylesheet" href="./css/footer.css" />
-<link rel="stylesheet" href="./css/osSlider.css" />
 </head>
 <body>
 <div class="container">
@@ -28,31 +27,27 @@
 		<div class="youxuan_gl" id="you_ju">
 			<p>空距自测</p>
 			<div class="youxuan_kjzc">
-				<form method="POST" name="jskj1" action="index.php">
-					<tbody>
-						<tr>
-							<td width="10"> </td>
-							<td width="100%" height="30" valign="top" bgcolor="#FFFFFF" class="tbl_zi"><br>
-								两点空距计算结果<input type="text" name="DISTANCE-wh" size="10" value="">公里 <br><br>
-								起点经度 <input type="text" name="startLongi_d" size="1" maxlength="3" value="">度 
-								<input type="text" name="startLongi_m" size="1" maxlength="3" value="">分 
-								<input type="text" name="startLongi_s" size="3" maxlength="6" value="">秒 <br>
-								起点纬度 <input type="text" name="startLagi_d" size="1" maxlength="3" value="">度 
-								<input type="text" name="startLagi_m" size="1" maxlength="3" value="">分
-								<input type="text" name="startLagi_m" size="3" maxlength="6" value="">秒<br> 
-								终点经度 <input type="text" name="endLongi_d" size="1" maxlength="3" value="">度
-								<input type="text" name="endLongi_m" size="1" maxlength="3" value="">分 
-								<input type="text" name="endLongi_s" size="3" maxlength="6" value="">秒<br> 
-								终点纬度 <input type="text" name="endLagi_d" size="1" maxlength="3" value="">度 
-								<input type="text" name="endLagi_m" size="1" maxlength="3" value="">分 
-								<input type="text" name="endLagi_s" size="3" maxlength="6" value="">秒<br><br>
-								<input type="submit" value="提交" name="B1">
-								<input type="reset" value="清空" name="B2">	
-								<input type="button" onclick="setfuqijwd();" value="福齐俱乐部">
-							</td> 
-						</tr>  
-					</tbody>
-				</form>
+				两点空距计算结果
+				<input type="text" class="distance" size="10" value="">公里 <br><br>
+				起点经度 
+				<input type="text" class="startLongi" size="1" maxlength="3" value="">度 
+				<input type="text" class="startLongi" size="1" maxlength="3" value="">分 
+				<input type="text" class="startLongi" size="3" maxlength="6" value="">秒 <br>
+				起点纬度 
+				<input type="text" class="startLagi" size="1" maxlength="3" value="">度 
+				<input type="text" class="startLagi" size="1" maxlength="3" value="">分
+				<input type="text" class="startLagi" size="3" maxlength="6" value="">秒<br> 
+				终点经度 
+				<input type="text" class="endLongi" size="1" maxlength="3" value="">度
+				<input type="text" class="endLongi" size="1" maxlength="3" value="">分 
+				<input type="text" class="endLongi" size="3" maxlength="6" value="">秒<br> 
+				终点纬度 
+				<input type="text" class="endLagi" size="1" maxlength="3" value="">度 
+				<input type="text" class="endLagi" size="1" maxlength="3" value="">分 
+				<input type="text" class="endLagi" size="3" maxlength="6" value="">秒<br><br>
+				<input type="button" value="提交" class="yx_btn">
+				<input type="reset" value="清空" class="cClear">	
+				<input type="button" class="setDef" value="福齐俱乐部">
 			</div>
 		</div>
 		<!-- 天气预告 -->
@@ -151,99 +146,19 @@
 							<p>集鸽地点：福齐睿翔村、武汉港总部、武昌分部、汉阳分部</p>
 						</div>
 					</div>
-					<div id="saishi_time"><a id="otherTime"></a></div>
+
+					<div id="saishi_time">
+						<h3 class="leaveTime"></h3>
+					</div>
 					<div id="saishi_zhibo">    
 						<a id="otherTime" href="boardcast.html" target="_blank">直播入口</a>
 					</div>
-						<script type="text/javascript">
-					//    var objElem = document.getElementById("otherTime");
-					//    var endTime = new Date('2015,9,17,19,35,00');
-					//    var nowTime = null;
-					//    var laveTimer = null;
-					//    function laveTime() {
-					//        nowTime = new Date().getTime();
-					//        var a = endTime - nowTime; //距离指定的时间还有多少毫秒..
-					//        if (a > 0) {
-					//            var arr_1 = [1000 * 60 * 60 * 24, 1000 * 60 * 60, 1000 * 60, 1000],
-					//				arr_2 = ['天', '小时', '分', '秒'],
-					//				temp = null;
-					//            var timeDesArr = [];
-					//            for (var i = 0, len = arr_1.length; i < len; i++) {
-					//                temp = Math.floor(a / arr_1[i]);
-					//                if (temp > 0) {
-					//                    timeDesArr.push((String(temp).length == 1 ? ("00" + temp).substr(1) : temp) + arr_2[i]);
-					//                }
-					//                a -= arr_1[i] * temp;
-					//            }
-					//            objElem.innerHTML = timeDesArr.join("");
-					//        } else {
-					//            objElem.innerHTML = "比赛进行中...";
-					//            clearInterval(laveTime);
-					//            laveTime = null;
-					//        }
-					//    }
-					//    laveTimer = setInterval(laveTime, 1 * 1000);
-
-					    function StringBuilder() {
-					        this.data = Array("");
-					    }
-					    StringBuilder.prototype.Append = function () {
-					        this.data.push(arguments[0]);
-					    }
-					    StringBuilder.prototype.toString = function () {
-					        return this.data.join("");
-					    }
-
-					    var target = [];
-					    var time_id = [];
-					    function show_date_time_0() {
-					        setTimeout("show_date_time_0()", 1000);
-					        for (var i = 0, j = target.length; i < j; i++) {
-					            today = new Date();
-					            timeold = target[i] - today.getTime();
-					            sectimeold = timeold / 1000;
-					            secondsold = Math.floor(sectimeold);
-					            msPerDay = 24 * 60 * 60 * 1000;
-					            e_daysold = timeold / msPerDay;
-					            daysold = Math.floor(e_daysold);
-					            e_hrsold = (e_daysold - daysold) * 24;
-					            hrsold = Math.floor(e_hrsold);
-					            e_minsold = (e_hrsold - hrsold) * 60;
-					            minsold = Math.floor((e_hrsold - hrsold) * 60);
-					            seconds = Math.floor((e_minsold - minsold) * 60);
-					            if (daysold < 0) {
-					                document.getElementById(time_id[i]).innerHTML = "比赛进行中...";
-					            }
-					            else {
-					//                if (daysold < 10) { daysold = "0" + daysold }
-					//                if (daysold < 100) { daysold = "0" + daysold }
-					                if (hrsold < 10) { hrsold = "0" + hrsold }
-					                if (minsold < 10) { minsold = "0" + minsold }
-					                if (seconds < 10) { seconds = "0" + seconds }
-					                var datetimeStr = new StringBuilder();
-					                if(daysold != 0)
-					                    datetimeStr.Append("" + daysold + "天");
-					                if (hrsold != 0)
-					                    datetimeStr.Append("" + hrsold + "时");
-					                if (minsold != 0)
-					                    datetimeStr.Append("" + minsold + "分");
-					                if (seconds != 0)
-					                    datetimeStr.Append("" + seconds + "秒");
-					                document.getElementById(time_id[i]).innerHTML = datetimeStr.toString();
-					            }
-					        }
-					    }
-					    setTimeout("show_date_time_0()", 100);
-
-					    target[target.length] = new Date(2016,3,10,10,00,00).getTime();
-					    time_id[time_id.length] = "otherTime";
-					</script>
 				</div>
 				<!-- 焦点图 -->
 				<div id="banner">
-					<div class="htmleaf-container">
+					<!-- <div class="htmleaf-container"> -->
 						<div class="slider">
-							<ul class="slider-main">
+							<ul class="slider_ul">
 								<li>
 									<a href="#"><img src="images/11.jpg" alt="" width="752px" height="320px"></a>
 								</li>
@@ -258,17 +173,8 @@
 								</li>
 							</ul>
 						</div>
-					</div>
-					<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
-					<script src="js/osSlider.js"></script>
-					<script type="text/javascript">
-						var slider = new osSlider({ //开始创建效果
-							pNode:'.slider', //容器的选择器 必填
-							cNode:'.slider-main li', //轮播体的选择器 必填
-							speed:3000, //速度 默认3000 可不填写
-							autoPlay:true //是否自动播放 默认true 可不填写
-						});
-					</script>
+					<!-- </div> -->
+					
 				</div>
 			</div>
 			<!-- 最新公告 -->
@@ -277,6 +183,7 @@
 				<a href="" class="part_more"></a>
 				<div class="news_list">
 					<ul>
+						<!-- 公告列表 -->
 						<li><i class="tricon"></i><a href="#">福齐2015.10.13日30专环第二关卫辉竞赛集鸽通知</a><span class="sp2">2015-10-12</span></li>
 						<li><i class="tricon"></i><a href="#">福齐2015.10.13日30专环第二关卫辉竞赛集鸽通知</a><span class="sp2">2015-10-12</span></li>
 						<li><i class="tricon"></i><a href="#">福齐2015.10.13日30专环第二关卫辉竞赛集鸽通知</a><span class="sp2">2015-10-12</span></li>
@@ -406,90 +313,6 @@
 							<li class="item6">二天</li>
 						</ul>
 					</div>
-					
-					<!-- <table>
-						<tr class="tr_color">
-							<td width="66">站名</td>
-							<td width="66">空距（KM）</td>
-							<td width="110">集鸽时间</td>
-							<td width="80">收费（元/羽）</td>
-							<td width="110">赛项</td>
-							<td width="65">报到期限</td>
-						</tr>
-						<tr>
-							<td width="60">卫辉</td>
-							<td>540</td>
-							<td>10月13日13-15时</td>
-							<td>110元</td>
-							<td width="110">1030元专环第二关</td>
-							<td width="60">二天</td>
-						</tr>
-						<tr>
-							<td width="60">卫辉</td>
-							<td>540</td>
-							<td>10月13日13-15时</td>
-							<td>110元</td>
-							<td width="110">30元专环第二关</td>
-							<td width="60">扫描版测试</td>
-						</tr>
-						<tr>
-							<td width="60">卫辉</td>
-							<td>540</td>
-							<td>10月13日13-15时</td>
-							<td>110元</td>
-							<td width="110">30元专环第二关</td>
-							<td width="60">二天</td>
-						</tr>
-						<tr>
-							<td width="60">卫辉</td>
-							<td>540</td>
-							<td>10月13日13-15时</td>
-							<td>110元</td>
-							<td width="110">30元专环第二关</td>
-							<td width="60">二天</td>
-						</tr>
-						<tr>
-							<td width="60">卫辉</td>
-							<td>540</td>
-							<td>10月13日13-15时</td>
-							<td>110元</td>
-							<td width="110">30元专环第二关</td>
-							<td width="60">二天</td>
-						</tr>
-						<tr>
-							<td width="60">卫辉</td>
-							<td>540</td>
-							<td>10月13日13-15时</td>
-							<td>110元</td>
-							<td width="110">30元专环第二关</td>
-							<td width="60">二天</td>
-						</tr>
-						<tr>
-							<td width="60">卫辉</td>
-							<td>540</td>
-							<td>10月13日13-15时</td>
-							<td>110元</td>
-							<td width="110">30元专环第二关</td>
-							<td width="60">二天</td>
-						</tr>
-						<tr>
-							<td width="60">卫辉</td>
-							<td>540</td>
-							<td>10月13日13-15时</td>
-							<td>110元</td>
-							<td width="110">30元专环第二关</td>
-							<td width="60">二天</td>
-						</tr>
-						<tr>
-							<td width="60">卫辉</td>
-							<td>540</td>
-							<td>10月13日13-15时</td>
-							<td>110元</td>
-							<td width="110">30元专环第二关</td>
-							<td width="60">二天</td>
-						</tr>
-						
-					</table> -->
 				</div>
 			</div>
 			<!-- 图片 -->
@@ -514,8 +337,8 @@
 				<h1></h1>
 				<a href="" class="part_more"></a>
 				<div id="video">
-					<img src="./images/video.png" alt="" width="320px" height="193px"/>
-					<!-- <embed src="http://player.youku.com/player.php/sid/XMTQyNjc5MzE0MA==/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" autostart="1" wmode="opaque" width="320" height="193"> -->
+					<!-- <img src="./images/video.png" alt="" width="320px" height="193px"/> -->
+					<embed src="http://player.youku.com/player.php/sid/XMTQyNjc5MzE0MA==/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" autostart="1" wmode="opaque" width="320" height="193">
 				</div>
 			</div>
 			<!-- 俱乐部地址 -->
@@ -578,50 +401,11 @@
 	</div>
 </div>
 </body>
-<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script><!-- 
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script> -->
 <script src="./js/jquery.nav.js"></script>
 <script src="./js/index.js"></script>
+<script src="./js/banner.js"></script>
 <script>
-
-/*console.log(document.body.scrollHeight);
-	console.log(window.screen.height);
-	console.log(window.screen.availHeight);
-	console.log(document.body.offsetHeight);
-	$(".youxuan").css('height','screenwidth');*/
-
-/*document.write(
-"屏幕分辨率为："+screen.width+"*"+screen.height
-+"<br />"+
-"屏幕可用大小："+screen.availWidth+"*"+screen.availHeight
-+"<br />"+
-"网页可见区域宽："+document.body.clientWidth
-+"<br />"+
-"网页可见区域高："+document.body.clientHeight
-+"<br />"+
-"网页可见区域宽(包括边线的宽)："+document.body.offsetWidth 
-+"<br />"+
-"网页可见区域高(包括边线的宽)："+document.body.offsetHeight 
-+"<br />"+
-"网页正文全文宽："+document.body.scrollWidth
-+"<br />"+
-"网页正文全文高："+document.body.scrollHeight
-+"<br />"+
-"网页被卷去的高："+document.body.scrollTop
-+"<br />"+
-"网页被卷去的左："+document.body.scrollLeft
-+"<br />"+
-"网页正文部分上："+window.screenTop
-+"<br />"+
-"网页正文部分左："+window.screenLeft
-+"<br />"+
-"屏幕分辨率的高："+window.screen.height
-+"<br />"+
-"屏幕分辨率的宽："+window.screen.width
-+"<br />"+
-"屏幕可用工作区高度："+window.screen.availHeight
-+"<br />"+
-"屏幕可用工作区宽度："+window.screen.availWidth
-);*/
-
 </script>
 </html>

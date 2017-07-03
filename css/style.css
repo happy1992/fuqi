@@ -18,7 +18,7 @@
 	height: 330px;
 	margin-top: 20px;
 	background-image: url(../images/d1.png);
-	border: 1px solid  #252525;
+	/* border: 1px solid  #252525; */
 	float: left;
 	overflow: hidden;
 }
@@ -26,8 +26,8 @@
 	width: 310px;
 	height: 320px;
 	background-image: url(../images/saishi.jpg);
-	margin: 5px;
-	border: 1px solid  #252525;
+	margin: 6px;
+	/* border: 1px solid  #252525; */
 	float: left;
 }
 .saishi_top{
@@ -61,7 +61,7 @@
 .dua_l h2{
 	margin-top: 30px;
 }
-.dua_l h2,h3{
+.dua_l h2,.dua_l h3{
 	/* margin: 0 auto; */
 	font:bold 16px/25px "Microsoft Yahei","微软雅黑",Verdana, Geneva, sans-serif;
 	line-height: 25px;
@@ -89,6 +89,16 @@
 	margin: 0 auto;
 	text-align: center;
 }
+.leaveTime{
+	font-size: 16px;
+	color: #fcd200;
+	height: 100%;
+	line-height: 40px;
+	text-align: center;
+}
+.leaveTime span{
+	font-size: 16px;
+}
 #saishi_zhibo{
 	width: 290px;
 	height: 40px;
@@ -100,11 +110,6 @@
 	width: 290px;
 	height: 40px;
 	display: block;
-}
-#saishi_time a {
-	line-height: 41px;
-	color: #fcd200;
-	font-size: 20px;
 }
 #saishi_zhibo a {
 	line-height: 41px;
@@ -119,6 +124,18 @@
 	float: left;
 	overflow: hidden;
 }
+/* 轮播图css */
+.slider{width: 752px;height: 320px;overflow: hidden;position: relative; }
+.slider_ul{width: 9999px;position: absolute;}
+.navContainer{position: absolute;bottom: 20px;width: 100%;z-index:25;text-align: center;}
+.navContainer li{width:8px;height:8px;border-radius: 4px;-moz-border-radius:4px;-webkit-border-radius:4px;margin: 0 5px;background-color: #ffffff;display: inline-block;*display:inline;*zoom:1;line-height: 20px;float: none; cursor: pointer;}
+li a img{border: none;}
+.navContainer .banActive{background-color: #ff0000;}
+.preBtn,.nextBtn{width: 57px;height: 57px;position: absolute;top:50%;margin-top:-28px;cursor: pointer;}
+.preBtn{left: -57px;background: url(../images/css_sprites.png) no-repeat -365px -271px;}
+.nextBtn{right: -57px;top:50%;background: url(../images/css_sprites.png) no-repeat -287px -271px;}
+
+/* 最新公告  css */
 #part_2{
 	width: 500px;
 	height: 285px;
@@ -189,6 +206,8 @@
 		display: block;
 		float: right;
 	}
+
+/* 赛程表  css */
 #part_3{
 	width: 530px;
 	height: 325px;
@@ -272,6 +291,7 @@
 		color: #ffeb01;
 	}
 
+/* 图片区  css */
 #part_4{
 	width:290px;
 	height: 230px;
