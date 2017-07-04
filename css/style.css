@@ -1,27 +1,29 @@
 .container{
 	width: 100%;
 	position: relative;
-	background-image: url(../images/fq003.png) ;
+	background-color: #3F3F3F;
+	/* background-image: url(../images/fq003.png) ; */
 	/* overflow:hidden; */
 }
 /* 主体内容 CSS */
 .main{
-	height: 935px;
+	height: 975px;
 	width: 100%;
 }
 #main_bo{
-	height: 915px;
-	background-image: url(../images/fq003.png) ;
+	/* height: 915px; */
+	/* background-image: url(../images/fq003.png) ; */
 }
 #part_1{
 	width: 1080px;
 	height: 330px;
 	margin-top: 20px;
-	background-image: url(../images/d1.png);
+	background-color: #252525;
+	/* background-image: url(../images/d1.png); */
 	/* border: 1px solid  #252525; */
 	float: left;
 	overflow: hidden;
-}
+} 
 #saishi{
 	width: 310px;
 	height: 320px;
@@ -35,11 +37,12 @@
 	height: 216px;
 	background: url(../images/css_sprites.png) no-repeat -5px -5px;
 	margin: 6px auto;
+	position: relative;
 }
 .dua_l{
 	width: 256px;
 	height: 123px;
-	position: relative;
+	position: absolute;
 	left: 15px;
 	top: 45px;
 	overflow: hidden;
@@ -59,6 +62,8 @@
 	float: left;
 }
 .dua_l h2{
+	float: left;
+	zoom:1;
 	margin-top: 30px;
 }
 .dua_l h2,.dua_l h3{
@@ -139,7 +144,8 @@ li a img{border: none;}
 #part_2{
 	width: 500px;
 	height: 285px;
-	background-image: url(../images/d2.png);
+	background-color: #2A2A2A;
+	/* background-image: url(../images/d2.png); */
 	margin:10px 10px 0 0;
 	padding: 20px;
 	float: left;
@@ -220,7 +226,8 @@ li a img{border: none;}
 		width: 510px;
 		height: 265px;
 		border: 1px solid #292929;
-		background-image: url(../images/d2.png);
+		background-color: #2A2A2A;
+		/* background-image: url(../images/d2.png); */
 		margin-top: 4px;
 		padding: 0 10px;
 		position: relative;
@@ -232,10 +239,18 @@ li a img{border: none;}
 		height: 100%;
 		overflow-y: auto;
 		overflow-x: hidden;
+		scrollbar-face-color:gray;
+		scrollbar-track-color:#1D1D1D;
+		scrollbar-3dlight-color:#1D1D1D;
+		scrollbar-highlight-color:#1D1D1D;
+		scrollbar-face-color:#808080;
+		scrollbar-shadow-color:#1D1D1D; 
+        scrollbar-darkshadow-color:#1D1D1D; 
 	}
 	.cal_container::-webkit-scrollbar{
 		width:6px;
-		background-image: url(../images/d2.png);
+		background-color: #1E1E1E;
+		/* background-image: url(../images/d2.png); */
 		opacity: 0.1;
 	}
 	.cal_container::-webkit-scrollbar-thumb{
@@ -246,7 +261,8 @@ li a img{border: none;}
 		width: 100%;
 		height: 30px;
 		margin: 2.5px 0px;
-		background-image: url(../images/d2.png);
+		background-color: #1E1E1E;
+		/* background-image: url(../images/d2.png); */
 		color: #ffffff;
 		text-align: center;
 		line-height: 30px;
@@ -271,7 +287,7 @@ li a img{border: none;}
 		width: 110px;
 	}
 	.item6{
-		width: 65px;
+		width: 61px;
 	}
 	/* .calendar table{
 		height: 265px;
@@ -295,7 +311,8 @@ li a img{border: none;}
 #part_4{
 	width:290px;
 	height: 230px;
-	background-image: url(../images/d2.png);
+	background-color: #2A2A2A;
+	/* background-image: url(../images/d2.png); */
 	margin:10px 5px 0 0;
 	padding: 15px;
 	float: left;
@@ -310,20 +327,30 @@ li a img{border: none;}
 		margin-top: 3px;
 	}
 	#pictures{
+		width: 100%;
 		height: 184px;
+		float: left;
 	}
-	#pictures td{
-		
+	#pictures ul{
+		width: 100%;
+		height: 100%;
+		margin-top: 5px; 
 	}
-	#pictures table{
-		 border-collapse:   separate;   
-		 border-spacing:   5px;
-
+	#pictures li{
+		margin-bottom: 3px;
+		float: left;
+	}
+	#pictures li:first-child{
+		margin-right: 5px;
+	}
+	#pictures li+li+li+li{
+		margin-left: 5px;
 	}
 #part_5{
 	width: 320px;
 	height: 230px;
-	background-image: url(../images/d2.png);
+	background-color: #2A2A2A;
+	/* background-image: url(../images/d2.png); */
 	margin:10px 5px 0 0;
 	padding: 15px;
 	float: left;
@@ -337,12 +364,14 @@ li a img{border: none;}
 	#video{
 		width: 320px;
 		height: 195px;
-		margin-top: 30px;
+		float: left;
+		margin-top: 6px;
 	}
 #part_6{
 	width: 370px;
 	height: 230px;
-	background-image: url(../images/d2.png);
+	background-color: #2A2A2A;
+	/* background-image: url(../images/d2.png); */
 	margin:10px 0 0 0;
 	padding: 15px;
 	float: left;
@@ -356,7 +385,8 @@ li a img{border: none;}
 #map{
 	width:370px;
 	height: 193px;
-	margin-top: 30px;
+	float: left;
+	margin-top: 15px;
 	overflow: hidden;
 	position: relative;
 }

@@ -1,7 +1,8 @@
 .container{
 	width: 100%;
 	position: relative;
-	background-image: url(../images/fq003.png) ;
+	background-color: #3F3F3F;
+	/* background-image: url(../images/fq003.png)  */;
 }
 .main{
 	width: 100%;
@@ -9,7 +10,7 @@
 #main_bo{
 	width: 1080px;
 	padding-top: 1px;
-	background-image: url(../images/fq003.png) ;
+	/* background-image: url(../images/fq003.png)  */;
 }
 .content{
 	width: 1060px;
@@ -17,7 +18,8 @@
 	margin-bottom: 9px;
 	/* background: #fdfcfc;
 		 */	
-	background: url(../images/d2.png);
+	background-color: #2A2A2A;
+	/* background: url(../images/d2.png); */
 	padding-top: 1px;
 	padding-bottom: 1px;
 }

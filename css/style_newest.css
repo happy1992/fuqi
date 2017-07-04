@@ -1,7 +1,8 @@
 .container{
 	width: 100%;
 	position: relative;
-	background-image: url(../images/fq003.png) ;
+	background-color: #3F3F3F;
+	/* background-image: url(../images/fq003.png)  */;
 }
 /* 最新公告主体 CSS */
 .main{
@@ -9,13 +10,14 @@
 }
 #main_bo{
 	width: 1080px;
-	background-image: url(../images/fq003.png) ;
+	/* background-image: url(../images/fq003.png) ; */
 	padding-top: 1px;
 }
 #main_bo>table{
 	margin-top: 20px;
 	margin-bottom: 10px;
-	background: url(../images/d2.png);
+	background-color: #2A2A2A;
+	/* background: url(../images/d2.png); */
 	border-collapse: collapse;
 }
 .main_left{
@@ -142,10 +144,18 @@
 	padding-left: 20px;
 	font-size: 12px;
 }
-
-.bg_td1{
-	background: url(../images/san.png) no-repeat left center;
+.tricon{
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left: 4px solid #ff0000;
+	border-right: 4px solid transparent;
 }
+/* .bg_td1{
+	background: url(../images/san.png) no-repeat left center;
+} */
 .li2{
 	font-family: "宋体";
 	font-size: 13px;

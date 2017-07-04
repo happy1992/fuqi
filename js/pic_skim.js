@@ -7,10 +7,10 @@ $(function(){
 	var $swp_list_li = $(".swp_list_ul li");      //缩略图容器
 	var $swp_li_len = $(".swp_list_cont li").outerWidth();  //缩略图子元素宽度
 	var countP = 0;
-	var leftstan = parseInt($cont_st_ul.css("left"));   //大图距其父级左边距离
-	var leftli = parseInt($swp_list_ul.css("left"));	//缩略图图距其父级左边距离
+	var leftstan = 0;   //大图距其父级左边距离
+	var leftli = 0;	//缩略图图距其父级左边距离
 	var thu = 0;  //缩略图计数
-	$(".arrRight").click(function(){
+	$(".arrRight").on("click",function(){
 		if (!$cont_st_ul.is(":animated")) {
 			if(leftstan <= (-($cont_st_li-1)*$contst_li_len)){
 				alert("这是最后一张了");
@@ -27,7 +27,7 @@ $(function(){
 			};
 		};
 	});
-	$(".arrLeft").click(function(){
+	$(".arrLeft").on("click",function(){
 		if (!$cont_st_ul.is(":animated")) {
 			if(leftstan >= 0){
 				alert("这已经是第一张了");
@@ -37,15 +37,15 @@ $(function(){
 				$cont_st_ul.stop().animate({left:(leftstan+"px")},200);   //大图向左偏移
 				/*$swp_list_ul.animate({left:(leftli+"px")},200);*/
 				$swp_list_ul.stop().animate({left:(leftli+"px")},200);   //缩略图位置重置
-				$swp_list_li.removeClass('pj').eq(countP).addClass('pj');   //判断缩略图位置
-				if(leftli !=0 && countP < $swp_list_li.length-2){
+				$swp_list_li.removeClass('pj').eq(countP).addClass('pj');   
+				if(leftli !=0 && countP < $swp_list_li.length-2){    //判断缩略图位置
 					leftli += $swp_li_len;
 					$swp_list_ul.stop().animate({left:(leftli+"px")},200);
 				}
 			};
 		};
 	});
-	/*缩略图移动*/
+	
 	$(".skim_right").on("click",function(){
 		if (!$swp_list_ul.is(":animated")) {
 			if((parseInt($swp_list_ul.css("left"))+$swp_li_len*$swp_list_li.length) <= $swp_list_ul.parent().width()){
@@ -65,5 +65,20 @@ $(function(){
 				$swp_list_ul.stop().animate({left:(thu+"px")},200);
 			};
 		};
+	});
+	
+	$swp_list_li.find("img").on("click",function(ev){
+		for (var i = 0; i < $swp_list_li.length; i++) {
+			if($swp_list_li[i] == ev.target.parentNode){
+				var index = i;
+			}
+		};
+		countP = index;
+		$(this).parent().siblings().removeClass('pj');
+		$(this).parent().addClass('pj');
+		leftstan = -$contst_li_len*index;
+		leftli = parseInt($swp_list_ul.css("left"));
+		$cont_st_ul.css("left",leftstan+"px");
+		/*console.log(leftli);*/
 	});
 });
