@@ -12,7 +12,8 @@
 }
 #main_bo{
 	/* height: 915px; */
-	/* background-image: url(../images/fq003.png) ; */
+	/* background-image: url(../images/fq003.png)  */;
+	background-color: #3F3F3F;
 }
 #part_1{
 	width: 1080px;
@@ -239,7 +240,7 @@ li a img{border: none;}
 		height: 100%;
 		overflow-y: auto;
 		overflow-x: hidden;
-		scrollbar-face-color:gray;
+		scrollbar-face-color:gray;        /* IE下的滚动条样式 */
 		scrollbar-track-color:#1D1D1D;
 		scrollbar-3dlight-color:#1D1D1D;
 		scrollbar-highlight-color:#1D1D1D;
@@ -247,10 +248,10 @@ li a img{border: none;}
 		scrollbar-shadow-color:#1D1D1D; 
         scrollbar-darkshadow-color:#1D1D1D; 
 	}
+	/* wekit引擎下的浏览器样式 */
 	.cal_container::-webkit-scrollbar{
 		width:6px;
 		background-color: #1E1E1E;
-		/* background-image: url(../images/d2.png); */
 		opacity: 0.1;
 	}
 	.cal_container::-webkit-scrollbar-thumb{
@@ -262,7 +263,6 @@ li a img{border: none;}
 		height: 30px;
 		margin: 2.5px 0px;
 		background-color: #1E1E1E;
-		/* background-image: url(../images/d2.png); */
 		color: #ffffff;
 		text-align: center;
 		line-height: 30px;
@@ -270,12 +270,13 @@ li a img{border: none;}
 	.calendar ul li{
 		float: left;
 		overflow: hidden;
+		text-align: center;
 	}
 	.item1{
 		width: 66px;
 	}
 	.item2{
-		width: 66px;
+		width: 67px;
 	}
 	.item3{
 		width: 110px;
@@ -284,7 +285,8 @@ li a img{border: none;}
 		width: 80px;
 	}
 	.item5{
-		width: 110px;
+		width: 108px;
+		overflow: hidden;
 	}
 	.item6{
 		width: 61px;
@@ -382,6 +384,35 @@ li a img{border: none;}
     	background: url(../images/css_sprites.png) no-repeat -301px -190px;
 		float: left;
 	}
+#distanceCal{
+	width:370px;
+	height: 193px;
+	color:#000000;
+	float: left;
+	margin-top: 15px;
+	/* border: 1px solid red; */
+	border-right: none;
+	overflow: hidden;
+	position: relative;
+}
+.disTable{
+	background-color:#F1F1F1;/* #1E1E1E */
+	width: 100%;
+	border-collapse:collapse; 
+}
+.disTable tr:first-child{
+	color: #ffffff;
+	background-color:#0000CD;/*#F8B001  */
+}
+.disTable td{
+	height: 31px;
+	font-size: 14px;
+	line-height: 31px;
+	text-align: center;
+	border: 1px solid gray;
+
+}
+/* 
 #map{
 	width:370px;
 	height: 193px;
@@ -393,4 +424,4 @@ li a img{border: none;}
 #map iframe{
 	position: relative;
 	top: -30px;
-}
+} */

@@ -14,87 +14,10 @@
 </head>
 <body>
 <div id="container">
-	<!-- 右侧悬浮框 -->
-	<div class="youxuan">
-		<!-- 扫码关注 -->
-		<div class="youxuan_gl" id="you_ma">
-			<h1 class="iphone"></h1>
-			<p>扫码关注</p>
-			<div class="app_weixin">
-				<i class="bg-app_weixin"></i>
-			</div>
-		</div>
-		<!-- 空距自测 -->
-		<div class="youxuan_gl" id="you_ju">
-			<p>空距自测</p>
-			<div class="youxuan_kjzc">
-				两点空距计算结果
-				<input type="text" class="distance" size="10" value="">公里 <br><br>
-				起点经度 
-				<input type="text" class="startLongi" size="1" maxlength="3" value="">度 
-				<input type="text" class="startLongi" size="1" maxlength="3" value="">分 
-				<input type="text" class="startLongi" size="3" maxlength="6" value="">秒 <br>
-				起点纬度 
-				<input type="text" class="startLagi" size="1" maxlength="3" value="">度 
-				<input type="text" class="startLagi" size="1" maxlength="3" value="">分
-				<input type="text" class="startLagi" size="3" maxlength="6" value="">秒<br> 
-				终点经度 
-				<input type="text" class="endLongi" size="1" maxlength="3" value="">度
-				<input type="text" class="endLongi" size="1" maxlength="3" value="">分 
-				<input type="text" class="endLongi" size="3" maxlength="6" value="">秒<br> 
-				终点纬度 
-				<input type="text" class="endLagi" size="1" maxlength="3" value="">度 
-				<input type="text" class="endLagi" size="1" maxlength="3" value="">分 
-				<input type="text" class="endLagi" size="3" maxlength="6" value="">秒<br><br>
-				<input type="button" value="提交" class="yx_btn">
-				<input type="reset" value="清空" class="cClear">	
-				<input type="button" class="setDef" value="福齐俱乐部">
-			</div>
-		</div>
-		<!-- 天气预告 -->
-		<div class="youxuan_gl" id="you_whe">
-			<a href="http://www.weather.com.cn/weather/101200101.shtml" target="_blank"><p>天气预报</p></a>
-		</div>
-		<div class="youxuan_bottom">
-		<!-- 返回顶部 -->
-			<div class="youxuan_gl_b" id="y_top">
-				<i class="youxuan_gl_b_top">
-				</i>
-				<p>顶部</p>
-			</div>
-			<!-- 关闭右悬框 -->
-			<div class="youxuan_gl_b">
-				<i class="youxuan_gl_b_close"></i><!-- <img src="./images/close.png" alt="" /> -->
-			</div>
-		</div>
-	</div>
-	<!-- 便民服务 -->
-	<div class="con_min">
-		<p>便民服务</p>
-	</div>
 	<!-- 首页头部 -->
 	<div class="header">
 		<div class="fq_4 header_fq4">
 			<img src="./images/logo.png" alt="LOGO" />
-			<!-- <div class="h_se">
-				<ul>
-					<li class="search">
-						<select name="tp" class="sel" style="width:80px;height:30px;">
-			                            <option value="0">不限</option>
-			                            <option value="1">最新快讯</option>
-			                            <option value="2">赛绩公告</option>
-			                            <option value="2">赛绩规程</option>
-			                            <option value="3">训放计划</option>
-				                    </select>
-						<input type="text" id="keyword" name="keyword" onkeydown="return keydown()" />
-						<span>
-							<p class="tn_s_button" onclick="_gaq.push(['_trackEvent', 'home_wh','search','搜索']);tuniuRecorder.push('3_3_1_1_1_2');">
-								<button type="button" style="border:0" id="searchSub" onclick="search_sub();"></button>
-							</p>
-						</span>
-					</li>
-				</ul>
-			</div> -->
 		</div>	
 	</div>
 	<!-- 导航 -->
@@ -361,6 +284,9 @@
 		<div class="copyright">
 				<p class="copyright_p">Copyright 2010-2015 All Rights Reserved 鄂ICP备11014914号</p>
 		</div>
+	</div>
+	<div id="fix_btn">
+		<span>返回顶部</span>
 	</div>
 </div>
 </body>

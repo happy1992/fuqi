@@ -10,6 +10,7 @@
 	height: 200px;
 	padding-bottom: 30px;
 	border-bottom: 2px solid #222222;
+	background-color: #2A2A2A;
 	/* background-image: url(../images/fq004.png)  */;
 }
 .footer h2{
@@ -77,9 +78,44 @@
 	padding-bottom: 10px;
 	color: #b5b5b5;
 	margin: 0 auto;
+	background-color: #2A2A2A;
 	/* background-image: url(../images/fq004.png)  */;
 }
 .copyright_p{
 	width: 400px;
 	margin: 0 auto;
+}
+/* 回到底部按钮 */
+#fix_btn{
+	position: fixed;
+    right: 70px;
+    width: 44px;
+    height: 46px;
+    bottom: 30px;
+    z-index: 999;
+   	text-align: center;
+    cursor: pointer;
+    background-color: #1E1E1E;
+    display: none;
+}
+#fix_btn span{
+    width: 26px;
+    padding: 9px;
+    height: 27px;
+    display: inline-block;
+    color:#ffffff;
+    font-size: 0;
+    font-family: "微软雅黑",Arial, Helvetica, sans-serif;
+    background: url(../images/css_sprites.png) no-repeat -130px -317px;
+    line-height: 9999px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+#fix_btn:hover span{
+    background: none;
+    color: #fff;
+    font-size: 12px;
+    line-height: 13px;
+    overflow: hidden;
 }

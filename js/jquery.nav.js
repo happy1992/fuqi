@@ -73,7 +73,11 @@ $(function(){
 
 	    //重置事件
 	    that.res = function (){
-	    	$(this).parent().find('input[type=text]').val('');
+	    	that.startLon.val('');
+	    	that.startLa.val('');
+			that.endLon.val('');
+			that.endLa.val('');
+			that.distance.val('');
 	    }
 
 	   //设置默认经纬度
@@ -113,20 +117,19 @@ $(function(){
 	}
 
 
-	/*右悬框 返回顶部 js*/
-	$("#y_top").click(function() {
+	/* 返回顶部 js*/
+	$("#fix_btn").click(function() {
 	    $("html,body").animate({scrollTop:0}, 300);
 	}); 
 
-	/*右悬框 关闭右悬框 js*/
-	$(".youxuan_gl_b:eq(1)").click(function(){
-		$(".youxuan:eq(0)").animate({right:"-36px"},300);
-		$(".con_min:eq(0)").animate({right:"0px"},300);
-	});
-	$(".con_min:eq(0)").click(function(){
-		$(this).animate({right:"-80px"},300);
-		$(".youxuan:eq(0)").animate({right:"0px"},300);
-	});
+	window.onscroll = function(){
+		var t = document.documentElement.scrollTop||document.body.scrollTop;
+		if (t>200) {
+			$("#fix_btn").css("display","block");
+		} else {
+			$("#fix_btn").css("display","none");
+		};
+	}
 
 
 
