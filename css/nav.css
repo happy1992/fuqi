@@ -2,11 +2,11 @@
 .header{
 	height: 175px;
 	width:100%;
-	background-image: url(../images/fq0001.png) ;
+	background-image: url(../images/fq001.jpg) ;
 	/* overflow: hidden; */
 }
 .header_fq4{
-	background-image: url(../images/fq0001.png) ;
+	background-image: url(../images/fq001.jpg) ;
 }
 .header img{
 	display: block;
